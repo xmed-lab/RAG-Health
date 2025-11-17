@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /hpc2hdd/home/sguo349/czhaobo/huggingface/hub/qwen25-7B # 这个不变名字，改下一行
+adapter_name_or_path: saves/REA/MIV/MedRAG/lora/sft # task, dataset
+template: llama3
+trust_remote_code: true
+
+### export
+export_dir: output/REA/MIV/MedRAG_lora_sft
+export_size: 5
+export_device: cpu
+export_legacy_format: false

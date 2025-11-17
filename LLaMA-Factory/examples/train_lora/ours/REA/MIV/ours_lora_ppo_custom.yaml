@@ -1,0 +1,65 @@
+### model
+model_name_or_path: output/REA/MIV/ours_lora_sft # 注意是SFT后的
+reward_model: saves/REA/MIV/ours/lora/reward # 这里不会使用 CUDA_VISIBLE_DEVICES=1,不然index会出问题。怪不得他要设置一个flex。
+trust_remote_code: true
+
+### method
+stage: ppo
+do_train: true
+finetuning_type: lora
+lora_rank: 8
+lora_target: all
+#lora_dropout: 0.1 # �~U��~M��~G~O�~C�~O�~Z~D�~W��~@~Y�~@�~P�
+
+### dataset
+dataset: ours_rea_miv_ppo # identity,alpaca_en_demo # 对应data_args
+template: llama3
+cutoff_len: 30000 
+# max_samples: 1000
+overwrite_cache: true
+preprocessing_num_workers: 16
+#ddp_find_unused_parameters: false
+# dataloader_num_workers: 1
+
+### output
+output_dir: saves/REA/MIV/ours/lora/reward # need modify, 对应evaluation_args
+logging_steps: 10 # 因为足够大
+save_steps: 200
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 1 # 正式跑为6
+gradient_accumulation_steps: 12 # 8*1*gpu_num数据太少会被舍弃==overall bacth数量，这里梯度累计很头疼，不知道为什么会OOM
+learning_rate: 5.0e-6
+num_train_epochs: 1.0 
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+ppo_epochs: 2 # 对应fintuning_args, tem很小，多样性可能较低。
+ppo_score_norm: true
+#ppo_whiten_rewards: true
+
+
+### generate
+max_new_tokens: 64 # 和速度显著相关。
+top_k: 0
+top_p: 0.95
+temperature: 0.1 # 0.1不鼓励进行探索
+# do_sample: false
+repetition_penalty: 1.2 # 避免重复,对应generating_args
+#i#length_penalty: 1.2 # 避免过长
+
+####
+# eval_dataset: ours_single_mmlu_ppo_eval
+# per_device_eval_batch_size: 6
+# eval_strategy: steps
+# eval_steps: 100000 # 500,一次性测完？
+
+
+# swanlab
+#use_swanlab: true
+#swanlab_project: RAGHealth
+#swanlab_run_name: SUMMARY-EHC
+#swanlab_api_key: 101JHc3WykoHLFJkEPYrt

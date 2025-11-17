@@ -1,0 +1,5 @@
+# 注意，这里是合并后的，不然使用lora_sft
+model_name_or_path: /home/czhaobo/RAGHealth/LLaMA-Factory/output/llama3_lora_sft
+template: llama3
+infer_backend: huggingface  # choices: [huggingface, vllm]
+trust_remote_code: true

@@ -1,0 +1,1605 @@
+nohup: ignoring input
+[INFO|2025-08-19 15:20:58] llamafactory.cli:157 >> Initializing 4 distributed tasks at: 127.0.0.1:25733
+W0819 15:20:59.593000 140710175270720 torch/distributed/run.py:779] 
+W0819 15:20:59.593000 140710175270720 torch/distributed/run.py:779] *****************************************
+W0819 15:20:59.593000 140710175270720 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0819 15:20:59.593000 140710175270720 torch/distributed/run.py:779] *****************************************
+[WARNING|2025-08-19 15:21:06] llamafactory.hparams.parser:162 >> `ddp_find_unused_parameters` needs to be set as False for LoRA in DDP training.
+[INFO|2025-08-19 15:21:06] llamafactory.hparams.parser:384 >> Process rank: 0, world size: 4, device: cuda:0, distributed training: True, compute dtype: torch.bfloat16
+[INFO|configuration_utils.py:697] 2025-08-19 15:21:06,594 >> loading configuration file output/SINGLE/mmlu/ours_lora_sft/config.json
+[INFO|configuration_utils.py:771] 2025-08-19 15:21:06,595 >> Model config Qwen2Config {
+  "_name_or_path": "output/SINGLE/mmlu/ours_lora_sft",
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 36,
+  "model_type": "qwen2",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 2,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000.0,
+  "sliding_window": 32768,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:06,597 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:06,597 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:06,597 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:06,597 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:06,597 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:06,597 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:06,597 >> loading file chat_template.jinja
+[INFO|2025-08-19 15:21:06] llamafactory.hparams.parser:384 >> Process rank: 1, world size: 4, device: cuda:1, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-08-19 15:21:06] llamafactory.hparams.parser:384 >> Process rank: 2, world size: 4, device: cuda:2, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-08-19 15:21:06] llamafactory.hparams.parser:384 >> Process rank: 3, world size: 4, device: cuda:3, distributed training: True, compute dtype: torch.bfloat16
+[INFO|tokenization_utils_base.py:2313] 2025-08-19 15:21:06,994 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|configuration_utils.py:697] 2025-08-19 15:21:06,995 >> loading configuration file output/SINGLE/mmlu/ours_lora_sft/config.json
+[INFO|configuration_utils.py:771] 2025-08-19 15:21:06,995 >> Model config Qwen2Config {
+  "_name_or_path": "output/SINGLE/mmlu/ours_lora_sft",
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 36,
+  "model_type": "qwen2",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 2,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000.0,
+  "sliding_window": 32768,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:07,012 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:07,012 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:07,012 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:07,012 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:07,012 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:07,012 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:07,012 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2313] 2025-08-19 15:21:07,453 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|2025-08-19 15:21:07] llamafactory.data.template:157 >> Add <|eot_id|>,<|eom_id|> to stop words.
+[INFO|2025-08-19 15:21:07] llamafactory.data.loader:157 >> Loading dataset pure_path_mmlu_SINGLE.jsonl...
+Converting format of dataset (num_proc=16):   0%|                                                                                                                  | 0/528 [00:00<?, ? examples/s]Converting format of dataset (num_proc=16):   6%|██████▌                                                                                                 | 33/528 [00:00<00:01, 292.35 examples/s]Converting format of dataset (num_proc=16): 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 528/528 [00:00<00:00, 1861.67 examples/s]
+Running tokenizer on dataset (num_proc=16):   0%|                                                                                                                  | 0/528 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=16):   6%|██████▌                                                                                                  | 33/528 [00:01<00:16, 29.48 examples/s]Running tokenizer on dataset (num_proc=16):  19%|███████████████████▋                                                                                     | 99/528 [00:01<00:05, 83.48 examples/s]Running tokenizer on dataset (num_proc=16):  25%|█████████████████████████▊                                                                             | 132/528 [00:01<00:03, 108.54 examples/s]Running tokenizer on dataset (num_proc=16):  31%|████████████████████████████████▌                                                                       | 165/528 [00:02<00:04, 78.62 examples/s]Running tokenizer on dataset (num_proc=16):  38%|███████████████████████████████████████                                                                 | 198/528 [00:02<00:03, 84.45 examples/s]Running tokenizer on dataset (num_proc=16):  44%|█████████████████████████████████████████████▌                                                          | 231/528 [00:03<00:04, 71.48 examples/s]Running tokenizer on dataset (num_proc=16):  56%|█████████████████████████████████████████████████████████▉                                             | 297/528 [00:03<00:02, 100.92 examples/s]Running tokenizer on dataset (num_proc=16):  69%|██████████████████████████████████████████████████████████████████████▊                                | 363/528 [00:03<00:01, 125.21 examples/s]Running tokenizer on dataset (num_proc=16):  81%|███████████████████████████████████████████████████████████████████████████████████▋                   | 429/528 [00:04<00:00, 152.73 examples/s]Running tokenizer on dataset (num_proc=16):  88%|██████████████████████████████████████████████████████████████████████████████████████████▏            | 462/528 [00:04<00:00, 129.02 examples/s]Running tokenizer on dataset (num_proc=16): 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 528/528 [00:04<00:00, 164.91 examples/s]Running tokenizer on dataset (num_proc=16): 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 528/528 [00:04<00:00, 110.01 examples/s]
+training example:
+input_ids:
+[27, 91, 2468, 8757, 842, 91, 29, 872, 27, 91, 408, 8757, 842, 91, 10370, 21608, 525, 458, 15235, 17847, 50820, 448, 88496, 264, 14490, 5185, 3118, 389, 279, 2856, 14490, 5185, 3897, 1189, 4710, 1, 12480, 1493, 5601, 510, 698, 1, 16, 13, 21806, 279, 4755, 9355, 323, 3529, 285, 974, 3118, 389, 279, 1995, 304, 279, 14490, 5185, 624, 698, 1, 17, 13, 29279, 429, 697, 11253, 5961, 2621, 279, 4755, 323, 525, 7248, 553, 279, 9760, 3565, 504, 279, 5185, 624, 1837, 1, 6341, 32035, 7036, 25, 11361, 510, 785, 43084, 6337, 315, 13070, 273, 315, 279, 43864, 2248, 315, 279, 37942, 374, 54324, 480, 311, 892, 315, 279, 2701, 32055, 5267, 3798, 510, 32, 25, 16193, 44662, 425, 94192, 17, 46, 11, 356, 25, 42, 44662, 422, 25, 5066, 12, 715, 1837, 1, 6262, 7662, 25, 21806, 279, 5248, 62626, 4755, 3118, 389, 279, 3239, 13, 39565, 40841, 369, 279, 4091, 3175, 2999, 323, 5978, 31273, 304, 697, 32711, 13, 715, 1837, 1, 5097, 15042, 34300, 82424, 11, 3118, 389, 279, 2856, 14490, 5185, 11, 5157, 264, 4396, 2999, 504, 508, 32, 11, 425, 11, 356, 11, 422, 60, 369, 279, 5248, 62626, 4755, 3118, 389, 279, 14490, 5185, 13, 387, 2797, 323, 63594, 2217, 1, 47232, 34300, 151665, 27, 91, 2468, 8757, 842, 91, 29, 77091, 27, 91, 408, 8757, 842, 91, 1339]
+inputs:
+<|start_header_id|>user<|end_header_id|>
+
+
+"You are an AI assistant tasked with qa a clinical note based on the initial clinical note provided." 
+
+"Follow these rules:
+"
+"1. Answer the questions clearly and concisely based on the information in the clinical note.
+"
+"2. Ensure that your answers directly address the questions and are supported by the relevant details from the note.
+"
+
+"Initial Clinical Note: Query:
+The descending loop of Henle of the nephron of the kidney is permeable to which of the following substances?
+Options:
+A:Na+, B:H2O, C:K+, D:Cl- 
+"
+
+"Task Description: Answer the multiple-choice questions based on the query. Provide explanations for the selected single option and ensure clarity in your reasoning. 
+"
+
+"Output Format:"
+"Now, based on the initial clinical note, choose a correct option from [A, B, C, D] for the multiple-choice questions based on the clinical note. be clear and concise."
+
+"Answers:"
+<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+label_ids:
+[33, 151665]
+labels:
+B<|eot_id|>
+[INFO|configuration_utils.py:697] 2025-08-19 15:21:19,793 >> loading configuration file output/SINGLE/mmlu/ours_lora_sft/config.json
+[INFO|configuration_utils.py:771] 2025-08-19 15:21:19,794 >> Model config Qwen2Config {
+  "_name_or_path": "output/SINGLE/mmlu/ours_lora_sft",
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 36,
+  "model_type": "qwen2",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 2,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000.0,
+  "sliding_window": 32768,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|modeling_utils.py:3979] 2025-08-19 15:21:19,833 >> loading weights file output/SINGLE/mmlu/ours_lora_sft/model.safetensors.index.json
+[INFO|modeling_utils.py:1633] 2025-08-19 15:21:19,833 >> Instantiating Qwen2ForCausalLM model under default dtype torch.bfloat16.
+[INFO|configuration_utils.py:1140] 2025-08-19 15:21:19,835 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151643
+}
+
+[WARNING|logging.py:329] 2025-08-19 15:21:19,838 >> Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Loading checkpoint shards:   0%|                                                                                                                                            | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|                                                                                                                                            | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|                                                                                                                                            | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|                                                                                                                                            | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|██████████████████████████████████████████████████████████████████                                                                  | 1/2 [00:03<00:03,  3.07s/it]Loading checkpoint shards:  50%|██████████████████████████████████████████████████████████████████                                                                  | 1/2 [00:03<00:03,  3.39s/it]Loading checkpoint shards:  50%|██████████████████████████████████████████████████████████████████                                                                  | 1/2 [00:03<00:03,  3.39s/it]Loading checkpoint shards:  50%|██████████████████████████████████████████████████████████████████                                                                  | 1/2 [00:03<00:03,  3.37s/it]Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:03<00:00,  1.79s/it]Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:03<00:00,  1.98s/it]
+[INFO|modeling_utils.py:4970] 2025-08-19 15:21:23,841 >> All model checkpoint weights were used when initializing Qwen2ForCausalLM.
+
+[INFO|modeling_utils.py:4978] 2025-08-19 15:21:23,841 >> All the weights of Qwen2ForCausalLM were initialized from the model checkpoint at output/SINGLE/mmlu/ours_lora_sft.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Qwen2ForCausalLM for predictions without further training.
+[INFO|configuration_utils.py:1093] 2025-08-19 15:21:23,857 >> loading configuration file output/SINGLE/mmlu/ours_lora_sft/generation_config.json
+[INFO|configuration_utils.py:1140] 2025-08-19 15:21:23,858 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "max_new_tokens": 2048
+}
+
+[INFO|2025-08-19 15:21:23] llamafactory.model.model_utils.checkpointing:157 >> Gradient checkpointing enabled.
+[INFO|2025-08-19 15:21:23] llamafactory.model.model_utils.attention:157 >> Using torch SDPA for faster training and inference.
+[INFO|2025-08-19 15:21:23] llamafactory.model.adapter:157 >> Upcasting trainable params to float32.
+[INFO|2025-08-19 15:21:23] llamafactory.model.adapter:157 >> Fine-tuning method: LoRA
+[INFO|2025-08-19 15:21:23] llamafactory.model.model_utils.misc:157 >> Found linear modules: o_proj,k_proj,gate_proj,q_proj,v_proj,down_proj,up_proj
+[INFO|2025-08-19 15:21:24] llamafactory.model.model_utils.valuehead:157 >> Provided path (output/SINGLE/mmlu/ours_lora_sft) does not contain value head weights: output/SINGLE/mmlu/ours_lora_sft does not appear to have a file named value_head.bin. Checkout 'https://huggingface.co/output/SINGLE/mmlu/ours_lora_sft/tree/None' for available files..
+[INFO|2025-08-19 15:21:24] llamafactory.model.model_utils.valuehead:157 >> Ignore the above message if you are not resuming the training of a value head model.
+[INFO|2025-08-19 15:21:24] llamafactory.model.loader:157 >> trainable params: 14,968,833 || all params: 3,100,907,521 || trainable%: 0.4827
+Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:04<00:00,  2.00s/it]Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:04<00:00,  2.21s/it]
+Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:04<00:00,  2.01s/it]Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:04<00:00,  2.22s/it]
+Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:04<00:00,  2.01s/it]Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:04<00:00,  2.22s/it]
+Use Embedding model: Use Embedding model:  Use Embedding model: Use Embedding model:  E5  E5
+E5E5
+
+
+[INFO|configuration_utils.py:697] 2025-08-19 15:21:25,842 >> loading configuration file /hpc2hdd/home/sguo349/czhaobo/huggingface/hub/e5-v2/config.json
+[INFO|configuration_utils.py:771] 2025-08-19 15:21:25,842 >> Model config BertConfig {
+  "_name_or_path": "/hpc2hdd/home/sguo349/czhaobo/huggingface/hub/e5-v2",
+  "architectures": [
+    "BertModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "torch_dtype": "float32",
+  "transformers_version": "4.49.0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|modeling_utils.py:3979] 2025-08-19 15:21:25,888 >> loading weights file /hpc2hdd/home/sguo349/czhaobo/huggingface/hub/e5-v2/model.safetensors
+[INFO|modeling_utils.py:4970] 2025-08-19 15:21:25,919 >> All model checkpoint weights were used when initializing BertModel.
+
+[INFO|modeling_utils.py:4978] 2025-08-19 15:21:25,919 >> All the weights of BertModel were initialized from the model checkpoint at /hpc2hdd/home/sguo349/czhaobo/huggingface/hub/e5-v2.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BertModel for predictions without further training.
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:25,921 >> loading file vocab.txt
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:25,921 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:25,921 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:25,921 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:25,921 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2048] 2025-08-19 15:21:25,921 >> loading file chat_template.jinja
+custom initialize success!
+Allow token for answer ['A', 'B', 'C', 'D', 'incomplete', 'Answer', 'is', ':']
+[INFO|2025-08-19 15:21:26] llamafactory.train.ppo.trainer_multi:157 >> ***** Running training *****
+[INFO|2025-08-19 15:21:26] llamafactory.train.ppo.trainer_multi:157 >>   Num examples = 528
+[INFO|2025-08-19 15:21:26] llamafactory.train.ppo.trainer_multi:157 >>   Num Epochs = 1.0
+[INFO|2025-08-19 15:21:26] llamafactory.train.ppo.trainer_multi:157 >>   Instantaneous batch size per device = 8
+[INFO|2025-08-19 15:21:26] llamafactory.train.ppo.trainer_multi:157 >>   Total train batch size (w. parallel, buffer, distributed & accumulation) = 128
+[INFO|2025-08-19 15:21:26] llamafactory.train.ppo.trainer_multi:157 >>   Gradient Accumulation steps = 4
+[INFO|2025-08-19 15:21:26] llamafactory.train.ppo.trainer_multi:157 >>   Num optimization epochs per batch = 2
+[INFO|2025-08-19 15:21:26] llamafactory.train.ppo.trainer_multi:157 >>   Total training steps = 4
+[INFO|2025-08-19 15:21:26] llamafactory.train.ppo.trainer_multi:157 >>   Number of trainable parameters = 14,968,833
+loading pairwise data to get golden_answer dict.
+time consuming: 0.017036914825439453 seconds
+self.batch_size_1: 32, self.config.mini_batch_size: 8
+self.config.ppo_epochs: 2
+  0%|                                                                                                                                                                       | 0/4 [00:00<?, ?it/s]custom initialize success!
+Allow token for answer ['A', 'B', 'C', 'D', 'incomplete', 'Answer', 'is', ':']
+loading pairwise data to get golden_answer dict.
+custom initialize success!
+Allow token for answer ['A', 'B', 'C', 'D', 'incomplete', 'Answer', 'is', ':']
+loading pairwise data to get golden_answer dict.
+time consuming: 0.01726818084716797 seconds
+custom initialize success!
+Allow token for answer ['A', 'B', 'C', 'D', 'incomplete', 'Answer', 'is', ':']
+loading pairwise data to get golden_answer dict.
+time consuming: 0.017408132553100586 seconds
+time consuming: 0.016402244567871094 seconds
+self.batch_size_1: 32, self.config.mini_batch_size: 8
+self.config.ppo_epochs: 2
+self.batch_size_1: 32, self.config.mini_batch_size: 8
+self.config.ppo_epochs: 2
+self.batch_size_1: 32, self.config.mini_batch_size: 8
+self.config.ppo_epochs: 2
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== B B D C A A B C D A B C D A B C D A B C D A B C D A B C D A B C
+GT======== B
+Pred======== D D C B A D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== A Explanation: The most likely cause of peripheral muscle fatigue during multiple-sprint activities is accumulation of inorganic phosphate (option A). This occurs because repeated contractions deplete ATP stores more quickly than they can be replenished through glycolysis, leading to reduced energy availability at cellular level. As
+GT======== A
+Pred======== A The codon sequence consists of triplet sequences of nucleotide bases found within both RNA (mRNA) and DNA molecules. Each set of three base pairs codes for one specific amino acid during protein synthesis. Therefore, options A ("triplet sequences of nucleotide bases in mRNA or DNA") accurately describe what makes
+GT======== A
+Pred======== D Explanation: The decrease in pH causes more protons (H+) to diffuse into mitochondrial matrix through proton channels called porins. This increase in H+ ions leads to higher hydrogen ion gradient across inner membrane compared to when there was no change in pH. As result, electrons can flow
+GT======== D
+Pred======== D Explanation: The individual presented as male at birth (XY chromosomes) but identified as female and uses feminine pronouns. This indicates they have undergone some form of transition towards being more aligned with their internal sense of self rather than biological sex assigned at birth. They also identify themselves as lesbian, which
+GT======== D
+Pred======== C C D B A C D B A C D B A C D B A C D B A C D B A C D B A C D B
+GT======== C
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D
+GT======== B
+Pred======== A Explanation: The most appropriate response would depend on how frequently you need to assess wound drainage after surgery. However, since there isn't any specific timeframe mentioned in question (e.g., every 4 hours), we can assume daily assessments as reasonable unless otherwise specified. Therefore, Option B ("daily") seems
+GT======== A
+Pred======== D Explanation: D is correct answer because reversible inhibitor competes with substrate molecule for same enzyme but different binding site than substrate binding site. This means that inhibitor can reversibly decrease number of enzyme molecules that are available to bind substrates without permanently altering their structure like options A
+GT======== D
+Pred======== D
+GT======== D
+Pred======== D D C B A D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== A Explanation: The differential distribution of substances in egg can result in differences in gene expression which may establish pattern in embryo as cells divide (Option A). This process occurs through mechanisms such as cell signaling pathways and transcription factors, leading to distinct patterns of gene activation and repression across different regions within
+GT======== A
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== A
+GT======== A
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: Vanillyl mandelic acid (VMA) levels can help establish diagnosis as they increase when there is increased secretion of catecholamines such as adrenaline and noradrenaline which may cause paroxysms of headaches etc.. So VMA level would rise if we have any tumor
+GT======== D
+Pred======== C
+GT======== C
+Pred======== C Explanation: In this case, insensible losses refer to those which cannot be measured through direct observation such as evaporation of sweat, respiration etc.. The options given include pyrexia (fever), using unhumidified oxygen, excessive weight loss & diarrhoea but none of them fall
+GT======== C
+Pred======== B Explanation: The patient presents with symptoms suggestive of worsening parkinsonism due to antiparkinsonian medications such as levodopa-carbidopa combination. This can lead to dysphagia, leading to aspiration risk if left untreated. Therefore, obtaining swallow assessment would help identify any
+GT======== B
+Pred======== B
+GT======== A
+Pred======== C C D B A E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3 4
+GT======== D
+Pred======== D Explanation: Carbamazepine can cause renal impairment, leading to decreased excretion of other drugs including vitamin D metabolites. This could potentially lead to hypercalcemia if not monitored closely. Therefore, increasing vitamin D intake might help mitigate potential side effects related to reduced metabolism (D) caused by carb
+GT======== D
+Pred======== B Explanation: When breathing faster than normal (hyperventilating), there's less time available for CO₂ removal through exhalation. This leads to lower levels of CO₂ being present in arterial blood compared to venous blood due to its rapid clearance during inhalations rather than slow release via expiration
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: Based on given clinical notes, there's no mention of any deformity at level of ankle joint (distal femur) which would cause anterior deviation. Also, plantar flexion of foot isn't mentioned as part of presentation either. Unilaterally increased stress across
+GT======== C
+Pred======== D Explanation: The TCA (Tricarboxylic Acid) cycle occurs during aerobic respiration when oxygen is present. It does not occur as part of anaerobic metabolism like glycolysis which takes place without oxygen. Therefore statement D stating that Oxygen is consumed in TCA Cycle is
+GT======== D
+Pred======== C C C D B A E F G H I J K L M N O P Q R S T U V W X Y Z b c
+GT======== C
+Pred======== C C C C C C C C C C C C C C C C C C C C C C
+GT======== C
+Pred======== B B B B B B B B B B B B B B B B B B B B B B
+GT======== C
+Pred======== D Explanation: The mandibular canal can only be seen on lateral cephalometric X-rays (not panoramic). Therefore, options A and B cannot be true. Option C includes both mandibular canal and hard palate which also cannot be seen on dental panoramic radiograph. Only option D
+GT======== D
+Pred======== D Explanation: The neurotransmitter noradrenaline (norepinephrine) is primarily involved in transmission of signals within sympathetic nervous system pathways. This means it acts as messenger molecule between nerve cells located at different locations along this pathway - specifically, between presynaptic terminals releasing norepineph
+GT======== D
+Pred======== D Explanation: A - Fluoxetine (Prozac) is primarily prescribed for depression and anxiety disorders, so this would not be best choice for managing symptoms described in case study. B - Methylphenidate (Ritalin) is typically used to treat attention deficit
+GT======== D
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== D No treatment is needed at this time. Explanation: Bowlegging can occur due to normal growth patterns during childhood. It typically resolves without any intervention as children grow older. Therefore, no specific medical interventions such as increased vitamin D intake, specialized exercises, surgical corrections, etc., would be necessary unless
+GT======== D
+Pred======== C Explanation: C is correct answer because fast-twitch fibers have fewer mitochondria than slow-twitch fibers but higher levels of ATPase enzymes which allow them to produce more energy quickly during short bursts of intense exercise like sprinting or weightlifting. This makes sense given their primary function as powerhouses within
+GT======== C
+Pred======== D Explanation: Waardenburg syndrome is not caused by mutation in FGFR3. It is associated with mutations in PAX3 gene which regulates development of neural crest cells responsible for pigmentation pattern formation during embryonic stages leading towards various types like Hirschsprung disease etc.. On contrary Achond
+GT======== D
+Pred======== B
+GT======== B
+Pred======== A Explanation: The short-acting bronchodilators work immediately after administration (within minutes) due to their rapid onset effect on relaxing smooth muscles around lungs' small tubes called bronchioles. This allows more airflow into lungs during inhalation without obstruction caused by inflammation or constriction within those tiny pass
+GT======== A
+Pred======== D Explanation: D no ionizing groups on enzyme or substrate participate in reaction Explanation: The question asks about enzymes whose activity remains constant across various pH levels. This indicates they do not rely heavily on specific acidic (pH < 7) or basic (pH > 7) conditions typically
+GT======== D
+Pred======== B The glycogen breakdown process in muscles primarily involves converting glucose into its phosphorylated form (glucose-1-phosphate) through enzymes like phosphoglucomutase and glucokinase. This step occurs before further degradation steps such as gluconeogenesis occur within skeletal muscle cells under normal physiological conditions when blood
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D
+GT======== D
+Pred======== A Explanation: In Down Syndrome, there is no significant change in AFP levels compared to normal individuals. However, Exomphalos can cause low AFP levels due to abnormal development of abdominal wall closure during pregnancy. Neural Tube Defects also result in reduced AFP levels as they affect embryonic growth and
+GT======== A
+Pred======== A Explanation: In δβ-thalassemia, there is typically no specific type of mutation (deletion, duplication, insertion) but rather reduction in production of β-globin chains due to mutations affecting gene encoding this protein. This results in reduced hemoglobin synthesis leading to symptoms characteristic
+GT======== A
+Pred======== D The given options do not provide any specific characteristics related to thermophiles or methane-producing organisms. However, among choices provided: - **A ( proteobacterium)** - Proteobacteria can include both aerobic and anaerobic species; some may produce methane under certain conditions but this isn't
+GT======== D
+Pred======== A Dotted lines indicate no connection between two nodes (no edge). In this case, there would only be one possible path through graph if we start at node A and want to reach node E without revisiting any previously visited nodes. Therefore, number of paths is equal to total number of edges minus
+GT======== A
+Pred======== B Explanation: The American Dental Association recommends using only small amount ( pea-sized dollop) of fluoride-free toothpaste when brushing children's teeth until they reach age 6 years old. After this time frame, parents should supervise their child as they brush their own teeth to prevent swallowing too much tooth
+GT======== B
+Pred======== D Explanation: D is correct answer as increased peripheral vascular resistance can lead to higher blood pressure even if there isn't any change in heart rate (pulse) or stroke volume. Decreasing cardiac output would actually decrease BP while decreasing pulse wouldn't have much effect since its not related to BP regulation. And decreased
+GT======== D
+Pred======== C C C C C C C C C C C C C C C C C C C C C C
+GT======== C
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== A Explanation: The statement that aligns best with information presented in clinical note is Option A: "Heart surgery patients who cannot run on treadmills may benefit from sauna use." The text mentions that repeated sauna use can help optimize body's response to future heat exposures, potentially serving as
+GT======== A
+Pred======== B The human body has several defenses against environmental bacteria, but mucous membranes play crucial role in trapping and neutralizing pathogens before they can enter deeper tissues. Therefore, most accurate description among options given would be: B: Mucus membranes Cortexal bone cells (osteocytes) do not
+GT======== B
+Pred======== B The kinase reaction involves addition or removal of phosphate group (B) to proteins or other molecules as part of signal transduction pathways within cells. This process plays crucial roles in various cellular processes such as cell growth regulation, metabolism control, and gene expression modulation. Therefore, among given options, only
+GT======== B
+Pred======== A Explanation: The coronal sutures join together two adjacent cranial bones along their anterior margins. In this case, they connect frontal bone (option A) with one of its neighboring bones - typically either parietal bone or sometimes even both sides if there's fusion between them due to premature closure
+GT======== A
+Pred======== D D C B A D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== C C D B A A B C D D C A B B A C D D C A B B A C D D C A B B A C
+GT======== C
+Pred======== D D D D D D D D D D D D D D D D D D D D D D D D D D D D D D D D D C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+GT======== D
+Pred======== C C D B A C D B A C D B A C D B A C D B A C D B A C D B A C D B
+GT======== C
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== B in complete.
+GT======== B
+Pred======== D Explanation: D is most likely cause of edema in this patient. Separation of endothelial junctions can lead to increased permeability of blood vessels, allowing fluid to leak out into surrounding tissues and causing edema. This process occurs when there is damage to vessel walls due to injury or inflammation
+GT======== D
+Pred======== A Explanation: In hypernatraemic dehydration, there is excessive loss of water relative to sodium ions (Na+). This results in increased osmolality within cells leading to cellular shrinkage if not corrected promptly. The primary cause can indeed involve inadequate fluid replacement during illness where patients may experience vomiting or diarrhea which
+GT======== A
+Pred======== B Explanation: The most likely cause of this presentation would be chlamydial infection due to her recent exposure through unprotected sex. Both chlamydia and gonorrhea can present similarly without other symptoms such as discharge; however, they require separate antibiotics because their treatments differ significantly (e.g., az
+GT======== B
+Pred======== B Explanation: Inconsistency between phenotype and genotype can occur due to various reasons such as mutations, gene-environment interactions, etc., but consanguineous marriages increase risk of inheriting autosomal recessive disorders because they result in higher chances of having two copies (one inherited from each parent)
+GT======== B
+Pred======== D The muscles of mastication (Buccinator, Masseter, Medius Temporalis) and Anterior Belly of Digastric muscle are all derived from First Branchial Arch. Therefore, Option D is correct choice as it includes both muscles of Mastication and Ant
+GT======== B
+Pred======== D Explanation: The question asks about what condition(s) does not apply to Charles Darwin's proposal regarding natural selection. Option D states overproduction of offspring which contradicts his theory as he believed organisms produce more than they need due to competition leading them towards extinction if there were no predators present. Therefore, this
+GT======== A
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D
+GT======== D
+Pred======== A C A should not prevent this reaction as there was no mention of any allergies related to eggs or other substances during consultation process. The patient's symptoms suggest allergic response rather than being caused by egg allergy specifically. Therefore, none of options listed (A, B, C) would typically
+GT======== A
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== D Explanation: The given options do not provide any direct evidence about prevalence of Graves' disease among men compared to women (option C). Option B states that it causes large multinodular goiter which isn't accurate as this condition typically results in diffuse enlargement rather than nodules. While option A mentions
+GT======== A
+Pred======== C A 350 ml catheter bag can be used at night as per given options (A, B, C, D). The other sizes mentioned do not fit within typical range of catheter bags available for use during nighttime care. Therefore, Option A would be most appropriate choice among
+GT======== D
+Pred======== A The given options do not provide any specific type of gland mentioned in question. However, we can infer that eccrine and apocrine glands are related to sweat production as they secrete sweat through pores in our skin. Therefore, most appropriate answer would be: C:A sweat glands (both eccrine
+GT======== A
+Pred======== C C D B A A B C D D C A B C D A B C D D C A B C D A B C D D C A
+GT======== C
+Pred======== A
+GT======== A
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== B Explanation: The recommended duration of stretching varies depending on type of exercise being performed and individual needs. However, according to most guidelines, holding stretches at 10-30 seconds can help improve flexibility without causing injury or discomfort. Therefore, Option B (10-30 seconds) appears to
+GT======== B
+Pred======== B Explanation: The spinal cord runs through vertebral column within bony cavity called spinal canal. Therefore, anatomical location of spinal canal can be described as dorsal (backwards) relative to other structures such as brainstem which lies ventral (forward). Hence Option B - dorsal
+GT======== B
+Pred======== D
+GT======== C
+Pred======== D Explanation: The dissolution of nucleoli occurs during prophase, which corresponds to option A (Formation of two distinct nuclear membranes). This process prepares chromosomes for further division by dissolving structures around them so they can move more easily within nucleus before moving towards opposite ends of cell during metaphase
+GT======== A
+Pred======== C C C D B A E F G H I J K L M N O P Q R S T U V W X Y Z b c d
+GT======== C
+Pred======== B Explanation: The fern plant has two distinct phases during its lifecycle - dominant phase being spore-bearing stage ( sporophyte) and less prominent phase being reproductive stage where male and female sex organs develop into haploid structures called micro- and megasporangia respectively. These
+GT======== A
+Pred======== A The recommended timeframe for initiating transfusion after obtaining prescribed unit of blood product from blood bank while it's still outside of refrigeration is indeed crucial due to potential degradation over time. According to current guidelines as of 2020, this duration typically does not exceed approximately three-quarters of
+GT======== A
+Pred======== C D B A E C D A B C D A B C D A B C D A B C D A B C D A B C D A
+GT======== C
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== C The best explanation for why net primary productivity (NPP) in terrestrial ecosystems tends to increase towards tropics is due to combination of factors mentioned in options A, B, and C. However, among these three options, most direct and comprehensive explanation would likely involve both biological processes related to increased
+GT======== C
+Pred======== D Explanation: The most appropriate intervention for this patient would be Option D - Prescribing Rifampin. This medication can help prevent infection if given within 7 days after exposure to someone infected with Neisseria meningitidis. Since patient has been exposed recently and shares similar symptoms as
+GT======== D
+Pred======== B Explanation: The pyruvate dehydrogenase complex (PDC) catalyzes irreversible reaction between pyruvate and NAD+ to form acetyl-CoA and CO₂. This process occurs within mitochondria, not in sarcoplasm as stated in Option A. Therefore
+GT======== B
+Pred======== C Explanation: The given options do not provide any direct evidence supporting their correctness regarding process of loading sugars into phloem for transport in plants. However, we can infer some general principles related to plant physiology: - Option A (Passive): This would imply no energy expenditure; however, since
+GT======== C
+Pred======== C Explanation: C is correct answer because larva will first encounter pith at center of twig, followed by primary xylem which surrounds pith. Then comes secondary xylem located between two layers mentioned above. The vascular cambium lies just inside outer
+GT======== D
+Pred======== A Explanation: The spectator's statement about welfare recipients being lazy reflects prejudice against this group of people. Prejudice refers to negative attitudes towards individuals or groups without sufficient knowledge or experience. Discrimination involves treating someone unfairly because they belong to particular category (e.g., race, gender). Ethnoc
+GT======== A
+Pred======== C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C
+GT======== C
+Pred======== A Explanation: - Option A is incorrect because some exons do contain functional sequences such as regulatory elements or splice sites, not necessarily only noncoding DNA. - Option B is partially true but misleading; while many proteins have their translation initiated at specific ATG (adenosine triphosphate
+GT======== A
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== A Explanation: The question asks about mode of inheritance associated with male-to-male transmission. In autosomal dominant (A) patterns of inheritance, both males and females can inherit trait if they receive one copy of mutated gene from either parent. This means there could potentially be cases where two affected
+GT======== A
+Pred======== C C D B A A B C D D C B A A B C D D C B A A B C D D C B A A B C
+GT======== C
+Pred======== B Explanation: The descending loop of Henle is primarily responsible for reabsorbing water into bloodstream through osmosis. This process helps maintain proper fluid balance within body. Therefore, among options given (A) Na⁺, (B) H₂O, (C) K⁺,
+GT======== B
+Pred======== D Explanation: D. Vascular dementia The patient exhibits cognitive impairment such as forgetfulness, difficulty naming objects, impaired counting ability, and inability to recognize familiar faces. These symptoms suggest vascular damage affecting brain regions responsible for cognition. Given presence of previous stroke events and high systolic blood pressure (>1
+GT======== D
+Pred======== B Explanation: When measuring blood pressure using sphygmomanometer ( device used to measure blood pressure), if you place cuff around upper arm higher than heart, this can cause measured systolic reading to appear lower while diastolic readings remain unchanged. This phenomenon occurs because increased
+GT======== D
+Pred======== B Explanation: An X-ray study of fibula would typically involve examining lower leg structure (B). This can help diagnose conditions such as fractures, dislocations, or other injuries affecting this area. Option A refers to heel bone but does not specifically target fibula; options C and D
+GT======== B
+Pred======== D D C B A D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== A
+GT======== A
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: Option D states that patient has previous diagnosis of osteoarthritis of cervical spine. This condition can cause chronic neck pain and stiffness, which could explain his symptoms after being treated with articulatory springing technique. Therefore, this treatment might have exacerbated his pre-existing conditions leading him
+GT======== C
+Pred======== D The male hormone testosterone is primarily produced by testicles (D) during puberty as part of normal sexual development. It plays crucial roles such as promoting secondary sex characteristics like facial hair growth and deepening voice pitch after reaching adulthood. Therefore, among given options, only Testes produces male hormones correctly according
+GT======== D
+Pred======== D Explanation: Option D states that with increasing number of repeated sprints, rate of accumulation of lactate in muscles decreases. However, this statement contradicts given options as all other choices mention specific conditions under which certain processes occur during high-intensity exercises like sprinting. Therefore, without additional
+GT======== B
+Pred======== C Explanation: The amino acid sequence of ASP (Asp) at position 235 was changed to PHE (Phenylalanine). This means that there was substitution where one amino acid was replaced by another during protein synthesis. In this case, original residue at position 23
+GT======== C
+Pred======== D Explanation: The formation of hydrogen ions (H+) during glycolysis can occur through two pathways: 1) Glycolytic pathway - This involves conversion of glucose into pyruvic acid via several steps including phosphofructokinase-1 (PFK-1), which consumes
+GT======== D
+Pred======== C Explanation: The bronchial breath sounds occur during both inhalation (inspiration) and exhalation (expiration). However, they have different characteristics compared to normal lung sounds. In contrast to regular respiratory noises which sound like soft blowing through straw when heard over chest wall, bronchial
+GT======== B
+Pred======== A Dotted lines indicate where you can insert additional text if needed. Don't forget to include any necessary punctuation marks! A<unk> should not appear anywhere else besides before first question mark (e.g., ?). Also remember to use proper grammar when writing responses! C<unk>A<unk>D<unk>B<unk>C
+GT======== A
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] tensor([0., 5., 5., 5., 1., 5., 1., 5., 1., 5., 5., 5., 5., 5., 5., 5., 5., 5.,
+        1., 0., 0., 5., 1., 5., 0., 5., 0., 5., 5., 0., 5., 1.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: Serous wound drainage typically appears clear or slightly yellow due to its low protein content compared to other types of wound exudates like pus (which can have higher levels of proteins). Therefore, among given options, only Option D ("D: it is clear or slightly yellow") accurately describes ser
+GT======== D
+Pred======== D
+GT======== D
+Pred======== C Explanation: Based on description given in clinical note, patient's experience aligns most closely with depersonalization disorder (C). Depersonalization disorder involves feelings of unreality or being detached from one's own body or mind during certain situations or periods of time. This matches what
+GT======== C
+Pred======== D Explanation: D is correct answer because lower motor neuron lesion typically results in decreased muscle strength, fasciculation, hyperreflexia, and loss of deep tendon reflexes. An ulnar nerve palsy can occur due to damage at any point along its course, including within spinal cord where
+GT======== D
+Pred======== C Explanation: C is incorrect because there's no mention about any energy production during this process (glucose → 2 pyruvates). This reaction occurs within cells under anaerobic conditions where oxygen isn't available; hence, we cannot expect significant ATP generation here either. However, if you're
+GT======== B
+Pred======== A The parasympathetic preganglionic neurons originate primarily from brainstem (specifically dorsal nucleus of vagus nerve) and spinal cord segments T1-L4. Therefore, none of options listed specifically match this origin as they all refer to different parts of peripheral nervous system rather
+GT======== A
+Pred======== C Explanation: The process of transcribing DNA into mRNA takes place within nucleus of eukaryotic cells. This step involves enzymes called polymerases binding to specific regions along double-stranded DNA helix known as promoters. These enzymes then unwind one strand ( template) while synthesizing complementary strands
+GT======== C
+Pred======== C Explanation: The most appropriate next step would be to contact Child Protective Services (CPS) as this incident involves accidental scalding due to neglectful supervision during bathing time. This action ensures proper investigation into potential abuse cases involving children under such circumstances. Therefore, contacting CPS should be considered before administering any
+GT======== C
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] tensor([5., 5., 5., 5., 0., 0., 5., 5., 5., 5., 5., 5., 5., 5., 5., 1., 5., 5.,
+        0., 0., 1., 0., 5., 1., 5., 5., 5., 5., 0., 5., 5., 5.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== C Explanation: The condition characterized by incompetent esophageal sphincter is gastroesophageal reflux disease (GERD). This occurs when there is relaxation of lower esophageal sphincter leading to backflow of stomach contents into esophagus causing symptoms like heartburn and regurgitation
+GT======== C
+Pred======== B Explanation: The given options can be evaluated as follows: A) Decreased pulmonary capillary wedge pressure - This would indicate reduced right heart filling pressures due to decreased systemic vascular resistance, but there's no indication of such changes here. B) Impaired contractility of left ventricle - Given his
+GT======== B
+Pred======== D Explanation: The ability to tolerate heavy training without succumbing to illness or injury (option A) can significantly impact athletic performance and endurance. Tactics (option B), while important, do not necessarily affect physical health as much as other factors like nutrition and hydration. Diet (option C) plays crucial role
+GT======== D
+Pred======== B Explanation: The process described as attachment of more amino acids via peptide bonds occurs during translation (protein synthesis) itself, where new amino acid residues are added sequentially onto growing polypeptide chains until they reach their mature form. Therefore, this modification does not occur post-translationally but rather happens concurrently with
+GT======== B
+Pred======== C Explanation: C This can be calculated using formula P(A) * P(B), where P(A) = 0.2 (probability of having one allele) and P(B) = 0.2 (probability of not having another allele). So, probability of both individuals carrying two
+GT======== C
+Pred======== A Explanation: The correct answer is (A) The nerve stimulus is removed. When muscle fiber receives signal through its motor neuron, it contracts until neurotransmitter at neuromuscular junction binds to receptors on sarcolemma of muscle cell membrane, causing depolarization and triggering contraction
+GT======== A
+Pred======== B Explanation: Stroke volume (SV) refers to amount of blood pumped out of each ventricle during one contraction. It can be influenced by several factors: 1. Preload - This represents end-diastolic filling pressure within heart chambers before they begin contracting again. An increase
+GT======== B
+Pred======== B Explanation: The third cranial nerve (oculomotor) controls eye movement and pupil constriction. Damage to this nerve can cause ptosis (drooping eyelid), which would result in Option B being true. However, there's no mention of any other effects like convergence issues (Option A
+GT======== B
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] tensor([1., 1., 1., 5., 5., 5., 5., 1., 5., 5., 5., 5., 1., 1., 1., 1., 5., 5.,
+        5., 5., 0., 5., 1., 5., 5., 5., 5., 5., 5., 5., 5., 5.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== B
+GT======== D
+Pred======== A C D B E A B C D E A B C D E A B C D E A B C D E A B C D E A B
+GT======== A
+Pred======== B
+GT======== B
+Pred======== B C D A
+GT======== B
+Pred======== D Explanation: D is most accurate choice because polytene chromosomes are formed through repeated rounds of DNA replication without cell division (mitotic phase). This allows them to retain their structure while still being able to carry out gene expression processes like transcription. Therefore, they can function as templates for protein synthesis even though
+GT======== D
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== C C D B A B C D A C D B A C D B A C D B A C D B A C D B A C D B
+GT======== C
+Pred======== D Explanation: Some fungi can also perform chemosynthesis without sunlight, which means they do not rely solely on photosynthesis like plants do. Therefore, statement D ("D: Some are photosynthetic.") is incorrect because there exist non-photosynthetic types within this group as well. The other options
+GT======== D
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1] tensor([0., 5., 1., 1., 0., 5., 5., 5., 1., 5., 5., 5., 5., 0., 0., 1., 5., 1.,
+        5., 5., 0., 5., 1., 5., 0., 1., 5., 1., 5., 1., 1., 5.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+*********End Step************
+*********End Step************
+*********End Step************
+*********End Step************
+                                                                                                                                                                                                  {'loss': 0.1922, 'reward': 3.3125, 'entropy': 83.45755767822266, 'query_len': 346.59375, 'response_len': 52.96875, 'learning_rate': 0.0, 'epoch': 0.0}
+  0%|                                                                                                                                                                       | 0/4 [05:33<?, ?it/s] 25%|███████████████████████████████████████▌                                                                                                                      | 1/4 [05:33<16:41, 333.77s/it]Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== A Explanation: The most appropriate response would be Option A because ensuring emergency services are called immediately after confirming cardiac arrest should always come before any other actions such as giving rescue breaths (Option B), performing CPR (C) without checking medical orders beforehand (D). This ensures timely intervention which can significantly improve outcomes
+GT======== A
+Pred======== A Explanation: The best course of action would be to reassure patient that her chances of becoming addicted to opioids are very low since there's no evidence suggesting any previous drug abuse or addiction issues. Additionally, maintaining current opioid therapy while closely monitoring its usage could help manage her severe pain effectively without increasing risk
+GT======== A
+Pred======== B Explanation: The patient's behavior exhibits characteristics of narcissism. Narcissists tend to prioritize their own needs over others' concerns, often displaying grandiosity, entitlement, and lack of empathy towards those around them. In this case, patient feels entitled to receive care from dentist rather than
+GT======== C
+Pred======== C Explanation: C The perceived frequency can be calculated using Doppler effect formula for moving sources and observers. In this case, both source ( gun) and observer (camera) are moving towards each other along line connecting them. Therefore, we need to consider two components -
+GT======== C
+Pred======== D Explanation: Monosomy refers to having one copy of chromosome instead of two copies as typically found in humans (i.e., 46 chromosomes). Among options given: - Option A (46, XX) represents normal female karyotype where there are two X-chromosomes
+GT======== D
+Pred======== C Explanation: C should be right choice as deletion in paternal chromosome 15 can cause angel man's syndrome. The other options do not have any relation with this condition.
+GT======== B
+Pred======== C C D B A D C B A D C B A D C B A D C B A D C B A D C B A D C B
+GT======== C
+Pred======== B Explanation: Insulin promotes glucose and amino acid uptake by muscle cells through its action as hormone. It binds to insulin receptors on target cell membranes, leading to activation of intracellular signaling pathways that facilitate glucose transport into cell and protein synthesis within muscle tissue. This process helps maintain blood sugar levels after
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== B The right atrioventricular valve (also known as tricuspid valve) is not semilunar valve but rather bicuspid valve because it has only two cusps instead of three like other valves such as mitral and pulmonic valves which have three cusps each. This makes Option
+GT======== B
+Pred======== D Explanation: Option D states that lateral pterygoid muscle is attached to condyle of mandibular ramus (condylar process) and protrudes mandible. This description matches function of lateral pterygoid muscle as one of its primary actions during m
+GT======== D
+Pred======== C C C C C C C C C C C C C C C C C C C C C C
+GT======== C
+Pred======== B Explanation: The process described as attachment of more amino acids via peptide bonds occurs during translation (i.e., polypeptide synthesis) itself rather than post-translational modification. Therefore, this process does not fit into category of modifying proteins' structures after they have been translated but instead happens concurrently with
+GT======== B
+Pred======== A Explanation: The patient's symptoms such as agitation, confusion, tremors, and lack of orientation suggest possible adverse effects of medication rather than alcohol withdrawal, fat emboli, or sepsis given his recent surgery and other medical conditions like hypertension and diabetes mellitus which could predispose him towards complications related
+GT======== B
+Pred======== A Explanation: Option A states that Carbon 3 has fewer hydrogen atoms than other carbons in molecule. This would make sense if we were considering how many hydrogens each carbon atom can bond with; however, there isn't enough context here about what type of bonds exist between different parts of molecule
+GT======== A
+Pred======== D Explanation: The Zone of Proximal Development (ZPD) refers to range of tasks that can be completed with assistance but not independently. In other words, individuals have difficulty completing certain tasks alone due to their current level of cognitive abilities; however, when given guidance or support, they may successfully complete
+GT======== D
+Pred======== D Explanation: D is correct answer because as number of mange mites increases, they can cause severe skin irritation and hair loss in red foxes, leading to weakened immune systems and increased susceptibility to diseases such as rabies and distemper. This could result in higher mortality rates among foxes
+GT======== C
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== D D C B A D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== C Explanation: The infraorbital nerve provides sensory innervation to skin overlying cheek, including maxillary anterior teeth (incisors), their labial gingival tissues, as well as upper lip and area around nostrils up to level of alar base. Therefore
+GT======== C
+Pred======== B Explanation: The patient's symptoms suggest Alzheimer's disease, which can be effectively managed using cholinesterase inhibitors such as donepezil, rivastigmine, or galantamine. These drugs work by increasing acetylcholine levels in brain, improving cognitive function and reducing behavioral disturbances associated
+GT======== B
+Pred======== C Explanation: Low carbohydrate diets can affect various aspects of athletic performance depending on factors such as duration and type of activity being performed. In short-duration exercises (less than 10 minutes), there isn't much impact because other energy sources like fat become more accessible quickly. However, longer durations require carbohydrates which
+GT======== C
+Pred======== A Dotted line should be added here as well. Can you please add one more question related to this topic? Cleared! Here's another question: What additional tests could potentially help confirm diagnosis if endoscopy does not reveal any visible lesions? Options: ) Liver function test b) Serum am
+GT======== A
+Pred======== D Explanation: The best answer here would be Option D - The patient's DMD carrier status is uncertain because of random X inactivation. This can occur when there is no mutation present but still results in some degree of expression due to differences between alleles during development. In such cases, testing may need further investigation
+GT======== D
+Pred======== D
+GT======== D
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: Random mating promotes random assortment of alleles during meiosis, which can break up co-adapted gene complexes and reduce epistatic interactions between genes. Therefore, random mating tends to decrease linkage disequilibrium rather than promoting it. The other options (asexual reproduction, coadapted gene
+GT======== D
+Pred======== D D C B A D C B A D C B A D C B A D C B A D C B A D C B A D C B
+GT======== D
+Pred======== C D A B D C B A A B C D D C B A A B C D D C B A A B C D D C B
+GT======== C
+Pred======== B Explanation: The presence of grade 3/6 systolic murmur radiating into neck suggests high-pressure condition within left ventricle due to increased afterload (aortic valve obstruction). This can occur as result of severe aortic stenosis, where there's
+GT======== B
+Pred======== C Explanation: The internal laryngeal nerves (C 8-T 1) supply sensory fibers to most parts of larynx except its anterior surface. They also provide motor fibers to all intrinsic muscles of larynx except cricothyroid muscle. Therefore, they
+GT======== A
+Pred======== D The most common way for free fatty acids (FFAs) to enter bloodstream is through binding them to proteins called apolipoproteins. This process helps transport FFAs throughout body efficiently. Therefore, among options given: - **A** Inside Red Blood Cells - FFA's do
+GT======== D
+Pred======== B Explanation: The kinase reaction involves addition or removal of phosphate group (B) at specific sites within proteins during cellular signaling processes. This process plays crucial roles such as activating enzymes like protein kinases which can then phosphorylate other molecules involved in various biological pathways including cell growth regulation, metabolism control,
+GT======== B
+Pred======== C
+GT======== C
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: The motor neurons responsible for controlling voluntary movements of skeletal muscles are found within ventral horn (also known as lamina VII) of gray matter in each segmental level of spinal cord. Therefore, none of options A, B, or C contain any motor neurons; only option
+GT======== D
+Pred======== B Explanation: In sensory assessment of arm, proprioception ( ability to perceive body position) can indeed be tested using same tracts as light touch. This is because both sensations rely on similar neural pathways within spinal cord and brainstem. Therefore, Option B ("B: Proprio
+GT======== B
+Pred======== A C D B A B C D A B C D A B C D A B C D A B C D A B C D A B C D
+GT======== A
+Pred======== C Explanation: Maximal dynamic exercise typically becomes predominantly aerobic after 1-2 minutes of continuous activity. This occurs because during shorter durations (such as within 10-30 seconds), anaerobic metabolism predominates due to insufficient oxygen supply to meet energy demands. However, once sustained physical exert
+GT======== C
+Pred======== A Explanation: The current estimate of human protein-coding genes ranges between 18,674 (Drosophila melanogaster) and 20,687 (Homo sapiens). However, as new research continues to uncover more genetic variations and potential regulatory elements within non
+GT======== B
+Pred======== D Explanation: The virus responsible for causing bronchitis in infants typically belongs to respiratory syncytial virus (RSV) family. RSV viruses have RNA genomes rather than DNA genomes, making options A and B incorrect. Additionally, mature virions do not lack any components; they contain both
+GT======== D
+Pred======== D Explanation: D. Streptococcus pneumoniae The patient's symptoms such as fever, nasal congestion, purulent nasal discharge, sore throat, and non-productive cough suggest bacterial infection rather than viral infections like Haemophilus influenzae type b or Moraxella catarrhalis.
+GT======== D
+Pred======== A Explanation: The carpal bones are indeed named as Scaphoid, Lunate, Triquetrum, Pisiform, Trapezium, Trapezoid, Capitate, Hamate. These names correspond exactly to those listed under Option A in given choices. Therefore, according to this
+GT======== A
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== C Explanation: Hurler Syndrome (MPS I H) is caused due to deficiency of α-L iduronidase enzyme leading to accumulation of heparan sulfate glycosaminoglycan in various tissues including brain causing progressive neurological deterioration. Therefore recombinant Alpha Iduronidase
+GT======== C
+Pred======== C Explanation: The fluid from ruptured ectopic pregnancy would most likely be found in pouch of Douglas (C). This location is where contents of uterus can spill over during intra-abdominal hemorrhage due to its position between bladder and rectum. In contrast,
+GT======== C
+Pred======== B Explanation: During marathon, as you run longer distances, your body's energy stores start to deplete. This leads to decline in performance because there isn't enough stored glucose (glycogen) available to sustain optimal running speed and endurance. Therefore, maximum sustainable power typically declines over time
+GT======== B
+Pred======== C C C C C C C C C C C C C C C C C C C C C C
+GT======== C
+Pred======== D Explanation: Cancer of esophagus (option A) can occur as result of chronic inflammation caused by acid reflux disease, which may develop due to impaired digestive enzymes resulting from CFTR dysfunction. Congenital absence of vas deferens (option B), also known as azoosperm
+GT======== A
+Pred======== D The most appropriate question related to this case would be menstrual history as there could be hormonal imbalances leading to irregular periods causing constipation. So, best choice among given options will be D. Menstrual history. D. Menstrual history
+GT======== D
+Pred======== A Explanation: C deletion D insertion B duplication The most common cystic fibrosis mutation consists of deletion (option A). This type of mutation involves removal of one or more nucleotides from DNA sequence, which can lead to changes in protein structure and function. In
+GT======== A
+Pred======== D Explanation: When you inflate cuff around neck of person who cannot speak due to paralysis or other conditions affecting speech muscles, they may not be able to produce sound because pressure prevents them from passing air through their vocal cords. This makes options A (they're unable to breathe) and B (
+GT======== D
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: D. Uninhibited Neurogenic Bladder The patient's symptoms suggest lack of normal control over her bladder function due to damage to nervous system responsible for regulating this process ( brainstem). This type of dysfunction results when there isn't enough inhibition at higher centers like cerebral cortex
+GT======== D
+Pred======== D Explanation: Since mother cannot contact father due to hostility towards each other, we need to find another way to get necessary genetic test results. Option D suggests helping mother cope with her emotions while also educating her about benefits of getting tests done. This approach acknowledges current situation
+GT======== D
+Pred======== B The autozygosity mapping technique can help identify autosomal recessive (B) patterns of inheritance. This method involves comparing DNA sequences between family members who share identical alleles at specific loci due to recent common ancestry within their shared ancestor(s). By analyzing such similarities across generations, researchers can pinpoint regions associated
+GT======== B
+Pred======== C
+GT======== C
+Pred======== B Explanation: Anaphylaxis can cause various symptoms such as stridor ( high-pitched sound when breathing), severe wheezing, rash, etc. However, bradycardia refers to slow heart rate which does not typically occur during allergic reaction like anaphylaxis. Therefore
+GT======== B
+Pred======== D Explanation: D. Elaborative Rehearsal The student's process of learning electrochemical cells can be best described as elaborative rehearsal because they build upon their existing knowledge (redox reactions) through active engagement and understanding rather than simply memorizing facts without connecting them to prior experiences. This approach
+GT======== D
+Pred======== B Explanation: Surfactants help maintain stability of lungs' air sacs called alveoli. They reduce surface tension within alveoli which would otherwise cause them to collapse when not inflated. By keeping alveoli open, they allow more efficient gas exchange between bloodstream and
+GT======== B
+Pred======== B Explanation: The parotid gland is located deep to temporalis muscle and superficial to masseter muscle. It produces saliva which flows through its duct into oral cavity near first lower molars (upper second molars). Therefore, correct answer is Option B - "B:super
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== A Explanation: The primary function of sodium bicarbonate (NaHCO₃) as ergogenic aid during endurance sports like long-distance running is its ability to buffer lactic acid produced within muscles. This helps maintain optimal intramuscular pH levels which can prevent fatigue caused by acidic conditions. By elev
+GT======== A
+Pred======== B The named consultant has legal responsibility for patient's care during hospital admission, stay, and discharge. This is because they have overall control over medical treatment of patients admitted to their department or specialty area within hospital. The other options (named nurses, ward managers, and GPs) may also play
+GT======== B
+Pred======== B
+GT======== B
+Pred======== D Explanation: The given options do not provide any specific information about systemic sclerosis (SSc). However, we can infer some general characteristics associated with SSSc: - It primarily affects women rather than men due to its association with estrogen levels during pregnancy. - Telangiectasias may occur but
+GT======== D
+Pred======== B Explanation: During contraction, IZones shorten rather than becoming elongated. In relaxed position, tropomyosin blocks myosin's access to binding sites of actin. Each myosin head has one actin-binding site but two ATP-hydrolyzing sites. Tropon
+GT======== B
+Pred======== D The most likely diagnosis is third-degree (complete) atrioventricular block (D). This condition occurs when there is complete interruption of electrical conduction between upper chambers (atria) and lower chambers (ventricles) of heart due to damage caused by previous myocardial infarctions.
+GT======== D
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== B Explanation: The question asks about range of acceptable differences between three consecutive peak flow measurements recorded over time. In this case, we need to find out if there's any specific requirement regarding difference among them being equal to 10 liters/min (option A), 20 liters/min (option B
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: D is most reliable way to assess for clubbing as it involves inspecting nail bed angle from side which can help identify any abnormality in shape of nails due to increased pressure within tissues beneath them caused by underlying conditions like heart failure or lung disease leading to clubbing
+GT======== D
+Pred======== C C D B A C D B A C D B A C D B A C D B A C D B A C D B A C D B
+GT======== B
+Pred======== A The histological examination of lung biopsy specimen in this case would most likely reveal diffuse interstitial fibrosis as one of key features associated with scleroderma-related pulmonary involvement. This condition can lead to restrictive changes in lung mechanics due to thickening of connective tissue surrounding airspaces and
+GT======== A
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== A Explanation: The highest proportion of ATP produced during aerobic respiration occurs at moderate intensities of exercise when oxygen supply meets demand through efficient utilization of glucose via glycolysis followed by oxidative phosphorylation within mitochondria. This process involves both aerobic and anaerobic pathways but predominantly relies upon aerobic mechanisms due to sufficient
+GT======== B
+Pred======== C C C C C C C C C C C C C C C C C C C C C C
+GT======== C
+Pred======== B Explanation: First cousins share 1 out of every 8 (or 1/8) of their DNA because they have two common grandparents who contributed half each of their genetic material to both individuals through different parents. Therefore, when comparing them at any given location along their chromosomes, there's roughly one
+GT======== C
+Pred======== D Explanation: Option D (pinching nares together for 5 minutes) is most appropriate next step in managing this patient's condition as it can help stop bleeding without causing further damage to nasal tissues. Pinching nostrils shut helps reduce blood flow into nasal cavity
+GT======== D
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: The gustatory system (I) involves taste perception through specialized cells called taste buds located primarily on tongue but also other parts like soft palate and epiglottis. This makes statement I true regarding its chemical nature as tastes can vary depending upon different chemicals present in food items which
+GT======== D
+Pred======== C Explanation: Cyanobacteria and green unicellular algae share some similarities but also exhibit significant differences due to their distinct evolutionary histories and characteristics. Here's how they compare: - **Cell Walls**: Both cyanobacteria ( type of prokaryote) and many types of green unicellular algae possess
+GT======== C
+Pred======== B Explanation: The given options describe different aspects of behavior patterns observed in animals. Option A refers to classical conditioning where responses occur after repeated exposure but not necessarily immediately upon first encounter; hence this does not fit well here as we need something more immediate like reflexes do. Option C describes voluntary actions rather than automatic
+GT======== B
+Pred======== A The most likely explanation for presence of brown, irregular mass behind tympanic membrane could be epithelial tissue proliferation (option A). This condition often occurs due to repeated infections leading to inflammation and subsequent scarring of middle ear mucosa. In this case, since there was recent antibiotic treatment without
+GT======== A
+Pred======== A Explanation: The human genome contains approximately 2-4 billion base pairs, which encode around 20,000-25,000 protein-coding genes. This means that only about 2%-5% (depending on how you calculate) of human genome actually codes for
+GT======== A
+Pred======== D Explanation: Option D (removing nail through endoscopic esophagogastroscopy) is most appropriate management as this procedure allows direct visualization and safe extraction of foreign objects such as nails without causing further injury or complications during open surgery like options A and C. Additionally, observing situation until spontaneous expulsion
+GT======== D
+Pred======== B Explanation: Achondroplasia is caused by mutations in FGFR3 gene, leading to overexpression of FGF receptors 4-7 (FGF-Rs). This results in increased signaling through Wnt/β-catenin pathway, causing excessive chondrogenesis during embryonic
+GT======== B
+Pred======== C C D B A A B C D C D C D C D C D C D C D C D C D C D C D C D C
+GT======== C
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== B Explanation: In this case, since both parents have same autosomal recessive disorder, they must carry one copy of mutated gene (heterozygous). The offspring can inherit two copies of mutant allele if both parents pass down their respective alleles during gamete formation. This results in
+GT======== D
+Pred======== C Explanation: The cardiac cycle refers to one complete heartbeat, which includes both ventricular filling (diastole) and ejection (systole). During this process, blood flows through heart chambers sequentially - first entering atria during diastole before being pumped into ventric
+GT======== C
+Pred======== D Explanation: The patient's symptoms suggest panic disorder, which can be treated with selective serotonin reuptake inhibitors (SSRIs) such as paroxetine. Lithium carbonate may cause side effects like tremors and seizures, methylphenidate has stimulant properties not suitable for this condition, and olanz
+GT======== D
+Pred======== C Explanation: C is only option where using antibiotics before catheterisation can help prevent infections caused by bacteria entering through urethra during insertion of catheter. This is particularly important if there's already existing condition like artificial heart valve which increases risk of bacterial endocarditis (
+GT======== C
+Pred======== D The World Record holder of Mile Race was WG George (D) who achieved this feat in 1904 at age of 57 years old. He ran distance in just under four minutes which remains one of most impressive performances ever recorded in track and field events. Therefore,
+GT======== D
+Pred======== C C C C C C C C C C C C C C C C C C C C C C
+GT======== B
+Pred======== A Explanation: The statement "Ontogeny recapitulates phylogeny" suggests that developmental stages of individual organisms mirror evolutionary changes over time. This concept was proposed by Ernst Haeckel but later found to have limitations due to various factors such as genetic mutations, environmental influences, etc. Therefore
+GT======== A
+Pred======== C Explanation: C is most accurate response as collagen fibers take some time to reestablish during wound healing. They provide structural support and help repair damaged tissues after injury. The other options do not accurately describe role of collagen fibers in wound healing process. Therefore, complete answer would be C.
+GT======== C
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== A Explanation: Spastic paraplegia refers to increased muscle tone (spasticity) affecting both lower limbs. Multiple sclerosis (MS), which involves demyelinating lesions within central nervous system, often leads to motor dysfunction including spastic paraparesis as one manifestation among others like sensory
+GT======== A
+Pred======== B B D C A B C D A B C D A B C D A B C D A B C D A B C D A B C D
+GT======== B
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== C C C D B A E F G H I J K L M N O P Q R S T U V W X Y Z b c d
+GT======== C
+Pred======== D Explanation: D is correct answer because during glycolysis, two molecules of NADH (from pyruvate) can donate electrons to generate three molecules of ATP through oxidative phosphorylation. Additionally, one molecule of FADH₂ produced during glycolysis also contributes to generating another molecule
+GT======== A
+Pred======== D D C B A D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== B Explanation: The patient's symptoms suggest depression rather than anxiety, which would typically present more prominently during acute episodes like panic attacks. Additionally, reassurance alone may not adequately manage chronic conditions such as severe depression without additional interventions. Therefore, assessing for suicidal ideation should be considered before proceeding further. Option B seems
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== B Explanation: The nature-nurture debate refers to relative importance of genetic factors (nature) versus environmental influences (nurture) in shaping human behavior and traits. In this context: - Structural and Anatomical Differences refer to physical characteristics such as height, weight, bone structure, etc., which
+GT======== A
+Pred======== A Explanation: Option A states that bowing of long bone is characteristic feature of Paget's disease. This statement is accurate as one of primary features associated with this condition involves abnormal remodeling of bones leading to deformities such as bowed legs (genu varum) or knock-k
+GT======== A
+Pred======== C Explanation: The correct statement regarding postnatal growth of maxilla is Option C: The zygomaticomaxillary sutures contribute to increasing height and length of maxilla. This occurs during childhood as part of normal skeletal development before reaching full maturity around age 20-2
+GT======== C
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== C Explanation: C is correct answer because there will be four possible genotypes among offspring - DDWW, DDww, ddWW, and ddww. The corresponding phenotypes can then be determined as follows: - Tall Violet (DDWW): All individuals have both alleles for height and color dominance
+GT======== D
+Pred======== B B D C A A B C D A B C D A B C D A B C D A B C D A B C D A B C
+GT======== B
+Pred======== B Explanation: The most appropriate action would be to inform medical staff (B) as blood clotting can potentially lead to serious complications if left untreated. Calling for help (A), informing patient (C), or removing and reinserting catheter without proper assessment could exacerbate situation. Therefore,
+GT======== B
+Pred======== A C D B A B C D A B C D A B C D A B C D A B C D A B C D A B C D
+GT======== A
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] tensor([5., 5., 1., 5., 0., 5., 5., 0., 5., 5., 1., 5., 0., 5., 5., 5., 5., 0.,
+        5., 1., 0., 1., 0., 5., 0., 5., 5., 1., 0., 1., 5., 1.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== C Explanation: C is correct answer because if 1% of men have this condition, then there must also be some women who carry one copy of defective gene but do not show symptoms themselves due to having another normal allele inherited from their father. These carriers can pass down mutated gene to their
+GT======== A
+Pred======== A Explanation: The beta-oxidation process involves breaking down fatty acids into smaller units called acylcarnitines through repeated cycles of dehydrogenation, hydration, thiolysis (beta-elimination), and re-dehydration reactions. Each cycle produces one NADH + H+, FAD
+GT======== A
+Pred======== A Explanation: In this scenario, we need to consider several factors when determining where fractured tooth fragment would most likely end up after being inhaled during consumption at takeaway food outlet. Here's why: The primary factor influencing path taken by fragmented tooth into either right or left lung involves
+GT======== A
+Pred======== C C C D B A E F G H I J K L M N O P Q R S T U V W X Y Z b c d
+GT======== C
+Pred======== D The most likely cause of this patient's condition is trinucleotide repeat expansion. This type of genetic disorder can lead to neurological problems such as intellectual disability, developmental delay, and behavioral issues like irritability and hand-flapping. In this case, both child's parents have learning difficulties, their mother
+GT======== D
+Pred======== A Explanation: The question asks about simple tandem repeat (STR) polymorphisms' usefulness in solving various types of problems related to human genetics. STRs can indeed help solve criminal and paternity cases due to their high variability among individuals within populations but not necessarily reconstructing relationship between humans and chimpanzees
+GT======== A
+Pred======== A Explanation: Based on given information, there is no mention of any seizures or neurological symptoms such as loss of consciousness or convulsions. Additionally, while ADHD can cause hyperactive behavior like climbing trees without concern for safety, this alone does not explain all aspects mentioned (e.g., frequent teacher re
+GT======== A
+Pred======== B Explanation: Option B states that impacted faeces can sometimes be mistaken for rectal tumour. This statement is accurate because impacted faeces (hardened stool) can cause discomfort similar to rectal tumour when pressed against anal canal during defecation. Therefore, this could lead
+GT======== B
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] tensor([5., 5., 0., 5., 5., 0., 1., 5., 5., 5., 5., 1., 0., 5., 5., 5., 5., 5.,
+        5., 5., 5., 5., 5., 1., 0., 5., 5., 1., 5., 5., 5., 5.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== B Explanation: The most common type of mutation occurs spontaneously during DNA replication without any external influence. These spontaneous mutations can either have no effect on organism's phenotype (neutrality), make them slightly better at surviving under certain conditions (deleteriousness), or even cause harmful effects leading to disease
+GT======== B
+Pred======== C C C D B A E F G H I J K L M N O P Q R S T U V W X Y Z b c d
+GT======== C
+Pred======== A Explanation: Malignant Hyperthermia (MH) follows autosomal dominant mode of inheritance. This means one copy of mutated gene can cause MH if inherited from either parent. Therefore, options B (autosomal recessive), C (X-linked dominant), and D (X-linked recessive)
+GT======== A
+Pred======== D D C B A D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== D Explanation: D. ATP stores The initial energy source for very high-force contractions lasting 1-2 seconds comes primarily from adenosine triphosphate (ATP) stored within muscle cells. This type of contraction requires more immediate energy than other types because they involve rapid short bursts of activity
+GT======== D
+Pred======== D Explanation: The symptoms described (redness, itching) suggest infection caused by bacteria such as Staphylococcus aureus or Streptococcus pyogenes. These organisms can enter through breaks in skin, like those found at hair follicles or sweat glands. Given patient
+GT======== D
+Pred======== A Explanation: The zinc finger protein family consists of several different types of transcription factors (TFs) which bind specifically to certain sequences within genes called cis-regulatory elements. These TFs can regulate gene expression either positively or negatively depending upon their binding sites. On other hand, Helix-Loop-H
+GT======== A
+Pred======== B Explanation: The head of sixth rib articulates with inferior articular demifacet of T5 and superior articular demafet of T6. This means that two structures meet at their respective ends, forming joint between them. Option B correctly describes this relationship.
+GT======== C
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] tensor([1., 1., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 5., 0., 5.,
+        5., 5., 5., 0., 5., 5., 5., 1., 5., 1., 5., 5., 5., 0.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: Lactate produced during anaerobic respiration can enter bloodstream and be transported back to liver where it can be converted into pyruvate through gluconeogenesis. This process allows for further metabolism of carbohydrates and fats as energy sources when oxygen levels decrease. Therefore, primary destination
+GT======== D
+Pred======== B Explanation: Gene doping involves using genetically modified organisms (GMOs) as supplements to improve athletic performance. This can include enhancing muscle growth, increasing endurance, reducing fatigue, improving recovery time after exercise, and even altering hormone levels to boost strength and power output. By manipulating specific genes within individuals' bodies
+GT======== B
+Pred======== B Explanation: During exercise, when oxygen supply becomes limited due to high intensity activity, muscles rely primarily on anaerobic glycolysis as their primary source of energy production. This process occurs within muscle cells without requiring oxygen but produces lactic acid instead of carbon dioxide. As such, phosphocreatine breakdown
+GT======== B
+Pred======== D Explanation: D. Vascular Endothelial Growth Factor (VEGF) is responsible for promoting angiogenesis during inflammation and healing processes. In response to injury like burns or cuts, VEGF stimulates new blood vessel development around damaged tissues, leading to improved oxygen supply and nutrient delivery necessary for proper wound repair
+GT======== D
+Pred======== A Explanation: Mutations in DNA can lead to changes in sequence of nucleotides within genes. These alterations may cause variations in amino acid sequences encoded by those genes (option A). This change could potentially produce completely different protein product if there's no compensatory mutation elsewhere in genome. Option
+GT======== A
+Pred======== A Explanation: In case of suspected transfusion reaction, immediate action needs to be taken to prevent further complications. The most appropriate course of action would be to turn off transfusion, notify medical staff immediately, and adhere to established protocols regarding handling such incidents. This ensures proper monitoring and management while allowing
+GT======== A
+Pred======== A Explanation: Option A is most appropriate management of this patient's insomnia as discontinuing bedtime drink of alcohol can help improve sleep quality. Alcohol consumption before sleeping may cause disturbances during deep stages of sleep leading to poor sleep continuity which could result in waking up earlier than usual. Therefore, advising him to stop
+GT======== A
+Pred======== C Explanation: C. Avoiding mother upon return. This could indicate distress or anxiety about being separated from her caregiver, which may suggest attachment issues or difficulties regulating emotions. It's important not only because it indicates potential emotional problems but also as part of assessing overall developmental milestones such as social interaction skills at
+GT======== C
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] tensor([5., 1., 1., 5., 0., 5., 5., 5., 5., 5., 5., 5., 5., 5., 1., 5., 5., 1.,
+        1., 1., 0., 1., 1., 5., 5., 5., 5., 5., 5., 5., 5., 5.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+*********End Step************
+*********End Step************
+                                                                                                                                                                                                  *********End Step************{'loss': 0.2009, 'reward': 3.875, 'entropy': 84.85191345214844, 'query_len': 370.5, 'response_len': 53.875, 'learning_rate': 1e-05, 'epoch': 0.25}
+
+ 25%|███████████████████████████████████████▌                                                                                                                      | 1/4 [10:22<16:41, 333.77s/it] 50%|███████████████████████████████████████████████████████████████████████████████                                                                               | 2/4 [10:22<10:14, 307.13s/it]*********End Step************
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== C
+GT======== C
+Pred======== A The group of drugs most likely to cause dry mouth is steroids (option A). Steroid medications can affect saliva production, leading to xerostomia or dryness of mouth. This side effect occurs because steroids inhibit prostaglandins' ability to stimulate salivary gland secretion. In
+GT======== C
+Pred======== C C C C C C C C C C C C C C C C C C C C C C
+GT======== C
+Pred======== B Explanation: The patient's symptoms suggest anal fissures due to prolonged exposure to feces during defecation. Acyclovir (option A) is used primarily for treating HSV-related conditions such as cold sores; imiquimod (option B), which stimulates immune response against HPV-associated w
+GT======== B
+Pred======== D
+GT======== B
+Pred======== C C D B A D C B A D C B A D C B A D C B A D C B A D C B A D C B
+GT======== B
+Pred======== C Explanation: C is most accurate response among options given. An intention tremor refers to involuntary movements during voluntary actions such as reaching out towards something or writing. This type of tremor can occur due to various reasons including neurological disorders like Parkinson's disease (B), but also other conditions affecting motor
+GT======== C
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== B B<LMHJLWUQKXVZDAROYFSPGTCNIEPUBRZMXYTGHVKAZSOLFWIUMEKNQJNXCVOEQGYURZSHQJWXELAYMKJHXSKXABRYQ
+GT======== B
+Pred======== A
+GT======== A
+Pred======== D Explanation: The src oncogene encodes tyrosine kinase enzyme, which adds phosphate groups to cellular proteins through phosphorylation reactions. This process plays crucial roles in cell signaling pathways involved in growth regulation, differentiation, survival, migration, adhesion, cytoskeletal organization, metabolism, apoptosis, angi
+GT======== D
+Pred======== B Explanation: Morphine has analgesic properties which means it reduces pain intensity without causing significant changes in consciousness (alertness). It can cause some side effects like constipation due to its effect on bowel movements rather than increasing diarrhea as mentioned in options C & D; however, there isn't any mention
+GT======== B
+Pred======== A Explanation: During multiple-sprint sports like 400-meter races, there's increased anaerobic metabolism due to high-intensity exercise lasting less than 90 seconds. This leads to higher concentrations of ammonia (amino acids), which can cause muscle fatigue if not properly managed. Uric acid
+GT======== A
+Pred======== B Explanation: The symptoms described - fever, chills, malaise, and painful ulcers at site of infection along with enlarged lymph nodes - suggest syphilis rather than other options like Chlamydia trachomatis which typically presents as urethritis without systemic manifestations; Haemophilus
+GT======== B
+Pred======== B Explanation: The fertilization process takes place within fallopian tubes (B) after egg has been released during ovulation. This location provides optimal conditions for successful conception due to its proximity to where sperm can reach eggs as they travel through reproductive tract towards uterus. Therefore, among all
+GT======== B
+Pred======== B Explanation: The referred pain in this patient is likely being caused by inflammation or damage to pancreas due to acute pancreatitis. The anterior rami of thoracic nerve roots innervate different regions along abdominal wall. Specifically, anterior ramus of T6-T9 supplies sensation to
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== C Explanation: The spleen is located near stomach and can sustain significant damage during abdominal injuries without causing immediate life-threatening complications like internal bleeding. However, if there's extensive bruising around area due to direct impact (as seen here), then rupture could occur leading to serious health issues such as shock
+GT======== C
+Pred======== D Explanation: The term 'coring' refers to when drugs are withdrawn from sealed vial, fragments of rubber bung can be cut out by needle. This process creates small holes in rubber stopper which allows air bubbles to enter syringe during withdrawal of liquid medicine. Therefore
+GT======== D
+Pred======== B The plasma membrane (B) most likely arose first during early stages of cell development because it serves as barrier between inside and outside environments of cell, protecting its contents while allowing necessary substances to enter and exit. This function was essential for maintaining cellular integrity and facilitating interactions within and without organism
+GT======== B
+Pred======== C Explanation: According to various studies and researches conducted over time, around one out of every hundred newborns has some kind of congenital anomaly (abnormalities) which can range from minor issues like cleft lip/palate up to more severe conditions such as Down syndrome or heart defects. Therefore
+GT======== B
+Pred======== D Explanation: The phosphocreatine molecule is located within sarcoplasmic reticulum of skeletal muscles. It serves as source of energy during periods of high demand when ATP levels drop rapidly due to intense exercise. This process helps maintain adequate concentrations of adenosine triphosphate (AT
+GT======== D
+Pred======== D Explanation: D is best choice as there's no indication of any obstruction during delivery (no mention of breech presentation, malpresentation, etc.). Administering epidural would not help here since she already has strong enough contractions; using tocolytics could potentially delay labour unnecessarily if her
+GT======== D
+Pred======== B B<LMHJWUZDQKXOYFVGHMNOEPIRSTUVNXYTGFDSAGCBAIJKLKJIHGFEIJHKLMNOPQRSTUVWXYZABCDWXYZABCDEFHIJKLMNOPQRSTUVWXZYABCDEFGHIJKLMNOPQRSTUWXYZABCDEFGHIJKLMOPQRSTUV
+GT======== B
+Pred======== B The ideal location of needle during inferior alveolar nerve block should pass anteriorly and laterally through medial pterygoid muscle (B). This position allows direct access to infraorbital canal without damaging surrounding structures such as blood vessels or nerves. Therefore, most appropriate choice among
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: D. α-Toxin The causative organism is Staphylococcus aureus, as indicated by its ability to produce pus-filled blisters (crepitus) and release large quantities of exudate through alpha-toxins. Alpha toxins cause damage to blood vessels leading to hemorrh
+GT======== D
+Pred======== C Explanation: C is most accurate choice because during high-intensity exercises like sprinting or weightlifting, there's often rapid increase in energy demands which outpaces body's ability to replenish adenosine triphosphate (ATP) through aerobic respiration alone. This leads to depletion
+GT======== C
+Pred======== D Explanation: The question asks which one among options listed does NOT belong as controlled substance. Controlled substances refer to drugs regulated under federal law due to their potential abuse risk or high dependency levels. Amongst all four choices given: - Option A (Codeine phosphate) can indeed cause addiction if
+GT======== D
+Pred======== D Explanation: The most appropriate action would be to reposition chest tube (D). This can help reduce any potential irritation caused by tube itself, as well as improve lung expansion and promote better gas exchange. Administering beta-blockers (A) may not necessarily alleviate symptoms related to respiratory distress due
+GT======== D
+Pred======== C C D B A C D B A C D B A C D B A C D B A C D B A C D B A C D B
+GT======== C
+Pred======== D D C B A D C B A D C B A D C B A D C B A D C B A D C B A D C B
+GT======== D
+Pred======== D D D D D D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== A Explanation: The correct answer is (A) The nerve stimulus is removed. When muscle fiber receives signal from its motor neuron through neurotransmitters at neuromuscular junctions, this initiates contraction of muscle fibers. However, if there's no further stimulation after relaxation has occurred due to removal
+GT======== A
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D D C B A D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== D Explanation: In this situation, if catheter continues to resist removal despite efforts made by yourself ( person performing procedure), calling for assistance from medical professional would likely result in more effective intervention than attempting further self-help measures such as trying harder to remove or unblock catheter. Medical professionals
+GT======== D
+Pred======== C C D B A C D B A C D B A C D B A C D B A C D B A C D B A C D B
+GT======== C
+Pred======== D The carotid pulse can be felt at base of throat, which corresponds to option D (on anterior side of neck). This area has rich blood flow due to its proximity to major arteries supplying oxygenated blood to brain through carotid artery system. Therefore, palpating
+GT======== D
+Pred======== A Explanation: The amygdala (option A) plays crucial role in processing emotions such as fear and anxiety. Given that patient reported experiencing sudden, intense feeling of overwhelming fear during his surgery while being under conscious sedation, this suggests that there might have been some stimulation of emotional centers within
+GT======== A
+Pred======== C C D B A C D B A C D B A C D B A C D B A C D B A C D B A C D B
+GT======== C
+Pred======== C Explanation: Maximal dynamic exercise becomes predominantly aerobic after 1 minute (option C). This occurs because during prolonged periods of intense physical activity, such as running marathons or performing heavy lifting exercises, oxygen consumption increases significantly due to increased demand for energy production through oxidative phosphorylation. As result,
+GT======== C
+Pred======== D Explanation: The karyotype 45,XY indicates male fetus without any extra chromosomes (XO). This condition results in severe physical abnormalities such as underdeveloped genitalia, small penis size, undescended testes, hypospadias, etc., making it incompatible with
+GT======== D
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: The given options do indeed affect performance in sports; however, ingestion of carnitine (D) has been shown through research studies such as those conducted at McMaster University's Department of Kinesiology where they found no significant improvement in endurance athletes who consumed L-carnitine compared to placebo
+GT======== D
+Pred======== D D C B A D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== A A, amyotrophic lateral sclerosis (ALS) is most common cause of progressive bulbar palsy. ALS can present as dysarthria, dysphagia, limb weakness, spasticity, and fasciculations. In this case, patient's symptoms suggest possible diagnosis of ALS
+GT======== A
+Pred======== C C D B A A B C D D C D C D D D D D D D D D D D D D D D D D D D
+GT======== A
+Pred======== C Explanation: C The calculation can be done using formula E = VO₂ × P₀₂ × t, where E represents total amount of energy (kJ), VO₂ is average rate of oxygen consumption (l/min), P₀₂ is partial pressure of oxygen at sea level
+GT======== C
+Pred======== D Explanation: D. Serine kinase The beneficial effect of desmopressin (DDAVP) in increasing urine osmolality can be attributed to its action at vasopressin receptor type V2 (V2R). This receptor belongs to family of G-protein-c
+GT======== A
+Pred======== B
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== A Explanation: In this case, most likely precipitating factor leading patient to file malpractice lawsuit would be their perception that physician was incompetent. This can be inferred from several factors mentioned in initial clinical note: - The patient had undergone surgery four months prior but still experiences limited mobility (
+GT======== B
+Pred======== C C C D B A E F G H I J K L M N O P Q R S T U V W X Y Z b c d
+GT======== C
+Pred======== D Explanation: Based on given clinical notes, we can infer that patient was exposed to meningitis during their stay at summer camp. Meningococcus bacteria typically enter through mucosal surfaces such as those found in nose and throat. In this case, most probable route of infection would
+GT======== D
+Pred======== B B<LMHJYDQKXVUZPONRSTWGFEDCABGHJKLNMOPQRSTUVWXYZXYAZIUEOAGTUVWXZYAEIOUYAHGIEAOUIEAYOUIGEAUAEOIUAIUOAIAEUOIUAIOAU
+GT======== B
+Pred======== D Explanation: D. Individuals who take Drug X have two times risk of dying from this type of cancer. C. This can be calculated using formula ( /b)/(c/d) = ad/cb where =number of deaths due to cancer among those taking Drug X; b=total
+GT======== D
+Pred======== D Explanation: D is correct answer because energy charge of cell refers to extent to which total adenine nucleotide pool is phosphorylated. This can affect various cellular processes such as metabolism, signaling pathways, and gene expression. Option A ( difference between charge on outside and inside
+GT======== D
+Pred======== B Explanation: The pilot was unable to detect light when he was 1 mile away from tower, which means there were no hits (correct detections) but some misses (incorrect non-detections). Therefore, situation described corresponds to miss according to Signal Detection Theory. So, appropriate response
+GT======== B
+Pred======== C Explanation: In this scenario, primary concern should be protecting both patients' health interests (i.e., preventing potential transmission) while respecting their individual rights regarding confidentiality. However, given context where one partner may unknowingly transmit virus due to lack of knowledge, disclosing status becomes crucial even if
+GT======== D
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== C Explanation: The question asks about possible outcomes due to adolescent substance use affecting executive functions. C.I (Pathological Changes) - This could occur as alcohol can cause damage to brain cells leading to cognitive impairments including poor decision making skills which fall under Executive Functions like planning ahead etc.. So yes pathological
+GT======== C
+Pred======== C C C D B A D C D C D C D C D C D C D C D C D C D C D C D C D C
+GT======== C
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== D D C B A D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== C C D B A A B C D D C B A A B C D D C B A A B C D D C B A A B C
+GT======== C
+Pred======== B D A C C B A D B A C D B A C D B A C D B A C D B A C D B A C
+GT======== B
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== B Explanation: Photoperiod refers to duration of light exposure experienced by plants over 24-hour period. In temperate ecosystems, photoperiod plays crucial role in regulating seasonal changes such as day length variations throughout different seasons (summer vs winter). As days become shorter during autumn months leading
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== C Explanation: C is most accurate explanation because teacher's use of both fixed-ratio (FR) schedule for getting stickers after completing tasks like showing up on time and achieving high quiz scores indicates that FR schedules can lead to strong behaviors being resistant to extinction while also promoting persistence over longer periods due
+GT======== C
+Pred======== C
+GT======== C
+Pred======== D Explanation: The rate of energy expenditure can be calculated using formula: C = (V˙O₂) × P where V˙O₂ represents volume flowrate of O₂ consumed per unit time (l/min), and P represents metabolic efficiency factor which varies depending on factors such as
+GT======== D
+Pred======== C Explanation: C is correct answer because Glossopharyngeal Nerve (CN IX) carries sensory fibers responsible for transmitting sensations such as taste and somatic sensations like touch and pressure along its course through pharynx and larynx. The damage caused by malignant tumor affecting this
+GT======== C
+Pred======== A Explanation: The patient's condition indicates severe tissue damage due to prolonged exposure to cold temperatures (frostbite). Given his current symptoms such as fever and confusion along with visible signs like cellulitis at midfoot area, this suggests systemic infection which could potentially lead to sepsis if left untreated. Am
+GT======== A
+Pred======== B
+GT======== B
+Pred======== A Explanation: Based on given clinical note, we can infer that sauna use may offer various health benefits such as reducing mortality rates, improving cognitive functions, preventing certain diseases, etc. Among options provided, Option A mentions protein facilitating intracellular function in response to heat, which aligns with
+GT======== A
+Pred======== A Explanation: Duodenal atresia (option A) can occur as part of trisomy 18 syndrome but does not necessarily indicate chromosomal abnormality alone. Holoprosencephaly (option B), hydrops fetalis (option C), and monozygotic tw
+GT======== D
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== A
+GT======== A
+Pred======== C C C D B A E F G H I J K L M N O P Q R S T U V W X Y Z b c d
+GT======== C
+Pred======== A
+GT======== A
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== B Explanation: During short-duration exercises such as sprinting or heavy lifting, primary source of energy comes from breaking down stored glycogen ( form of glucose) within muscle cells through glycolysis. This process generates lactic acid which contributes significantly towards producing adenosine triphosphate (ATP),
+GT======== B
+Pred======== B The bladder stores urine before excretion through urination. However, this does not describe where urine is collected within body itself; rather, it's stored after being produced by kidneys. Therefore, none of options (A - Bladder, B - Kidneys, C - Ureters)
+GT======== A
+Pred======== B Explanation: The normal resting heart rate range varies slightly between individuals but generally falls within 60-100 beats per minute (bpm) for adults aged 18 years old and older. This means options A ("60-80 bpm") and C ("60-9
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== A
+GT======== A
+Pred======== D Explanation: D.II,III,andIV C.I,IandII
+GT======== D
+Pred======== C Explanation: C D B A C D B A C D B A C D B A C D B A C D B A C D B A C
+GT======== C
+Pred======== B Explanation: The concept of punctuated equilibrium refers to options 2 (B) - Ecological succession arrested by sudden environmental changes, such as fires. This theory suggests that species undergo rapid evolutionary change during short periods when their environment experiences significant disturbances like wildfires, volcanic eruptions, or other catastrophic
+GT======== D
+Pred======== D Explanation: The prescription states that medication should be taken as three equal doses of 1.5 mg each. To find out how much this equates to per dose, we divide total dosage (1.5 mg) by number of doses (three). Therefore, each dose would contain \(
+GT======== D
+Pred======== C C C C C C C C C C C C C C C C C C C C C C
+GT======== D
+Pred======== C Explanation: The question asks about origin of sympathetic innervation for visceral organs involved in patient's condition (intermittent loose stools alternating with constipation). Based on given options, we can eliminate some possibilities: Cortex medullary junction - This area contains both parasymp
+GT======== C
+Pred======== B The most appropriate response would involve all three individuals mentioned - nurse, patient, and possibly even ward clerk if they have access to necessary documentation like medical records or other forms required during discharges. This ensures comprehensive coverage across different aspects related to patient care post-discharge. Therefore, Option B ("
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== B Explanation: The question asks about which factor makes cliff nesting adaptive for goose species. Option B states that cliff-side nesting confers higher fitness (survival) rate compared to beach nesting. This implies that there's some advantage associated with nesting on cliffs over those on sandy shores. While options
+GT======== B
+Pred======== A
+GT======== A
+Pred======== B D C A B C A D B C A D B C A D B C A D B C A D B C A D B C A
+GT======== C
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== D Explanation: The given scenario describes situation where individual has inherited genetic mutation resulting in partial retention of fetal hemoglobin (HbF) throughout their life instead of transitioning to adult hemoglobin (HbA). This condition can lead to several health issues due to altered red blood cell function and increased
+GT======== D
+Pred======== D Explanation: D is correct choice because we need to know how many people had positive tests but negative biopsies to find out what percentage were actually sick. We don't care about incidence rates since those would tell us how often someone gets prostate cancer overall - not if they get it after taking our test
+GT======== D
+Pred======== D The ectoderm gives rise to all three of options listed (A, B, and C). This can be determined through embryonic development where ectoderm forms various tissues such as skin, hair, nails, teeth, sweat glands, mammary ducts, eyes, ears, nose,
+GT======== D
+Pred======== B Explanation: The negative Babinski sign (extensor) suggests higher motor neuron lesion at T4-T6 level, not L1-L2 where knee reflex originates. Therefore, options A and D can be eliminated immediately due to incorrect anatomical locations associated with their respective responses. Option C also
+GT======== C
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== C Explanation: Retrotransposons are mobile genetic elements that replicate through RNA intermediate. They do not require replication via proteins like some other types of transposable elements (e.g., Class II). Therefore, options A ("DNA sequences that can move from one site in genome to another without replicating")
+GT======== C
+Pred======== A
+GT======== A
+Pred======== B B<LMHJLWQKUZDASGMRNVOEYXTCIPFBJGHAKIOLPXYTUVWXOIJLKMNOPQRSTUVWXYZABCD
+GT======== B
+Pred======== A Explanation: The purpose of treating proteins with detergent like SDS (sodium dodecyl sulfate) during SDS-PAGE procedure is primarily to provide them with uniformly charged surface. This ensures consistent migration rates across different samples when subjected to electric fields within gel matrix. Here's why each
+GT======== B
+Pred======== B The primary role of microtubules within neurons involves maintaining their structural integrity during various processes such as axonal transport, synaptic vesicle trafficking, and cell division. Given this context, we can infer which cellular activities might be significantly impacted if there were substantial reductions in microtubule stability due to mutations
+GT======== D
+Pred======== C Explanation: The process that leads to decrease in gene expression involves increasing methylation activity. Methylation adds methyl groups to specific sites within genes, leading to changes in chromatin structure and reduced accessibility of transcription factors. This results in decreased gene expression as fewer proteins bind to promoter region and initiate RNA
+GT======== C
+Pred======== A Explanation: The innermost layers of both digestive system (stomach) and respiratory system (lungs) develop from endodermal tissue during embryonic development. This means they originate from endodermic layer rather than mesoderm or ectoderm. Therefore,
+GT======== A
+Pred======== A A, Right ventricular hypertrophy D, Left ventricular hypertrophy
+GT======== A
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] tensor([5., 5., 5., 5., 1., 1., 1., 5., 5., 1., 1., 1., 1., 1., 1., 5., 5., 1.,
+        1., 0., 5., 0., 5., 5., 5., 5., 1., 0., 0., 5., 5., 1.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== C C C C C C C C C C C C C C C C C C C C C C
+GT======== C
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== C C C C C C C C C C C C C C C C C C C C C C
+GT======== C
+Pred======== B Explanation: The supraorbital ridge pressure (option A) can cause pain due to its proximity to sensory nerves responsible for facial sensations. Pressure applied to little finger pulp (option B), however, does not typically produce significant pain as this area has fewer nociceptive receptors compared to other parts of
+GT======== B
+Pred======== A The small, soft toothbrush (option A) is typically considered best tool for cleaning mouth as it can effectively remove plaque without causing damage to teeth or gums. It also allows for better visibility when brushing around difficult-to-reach areas such as between teeth and along gum lines. Therefore, this would
+GT======== A
+Pred======== A Explanation: The question asks about testing hypothesis that ants defend plant by either killing or chasing away leaf-feeding insects. Option A removes ants and measures subsequent leaf damage, which would allow us to see if there's any change in leaf feeding due to absence of ants. This experiment can help
+GT======== A
+Pred======== A Explanation: CΙγΕ (IgE) has ε-heavy chains and is found primarily on surface of mast cells and basophils. This makes IgE unique among immunoglobulin classes because its primary function involves allergic reactions rather than immune defense against pathogens like other types do. Therefore, given
+GT======== A
+Pred======== D D D D D D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] tensor([1., 5., 5., 5., 5., 5., 5., 5., 5., 1., 1., 1., 0., 5., 0., 5., 5., 5.,
+        5., 5., 5., 5., 5., 0., 1., 1., 1., 5., 5., 5., 5., 1.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D Explanation: The patient's symptoms suggest possible compression of ulnar nerve at elbow due to its course through cubital tunnel (Cubitus Uluus). This condition can lead to sensory deficits such as those described here - diminished sensation along medial aspect of ring finger and all
+GT======== D
+Pred======== B Explanation: The ratio of A:T in newly synthesized complementary strand will also have 3:2 ratio because each base pairs up with its complement (i.e., Adenine pairs with Thymine). Therefore, if there were three As paired with two Ts on one side, then when
+GT======== C
+Pred======== C Explanation: The absolute threshold refers to minimum level at which stimulus can be detected consistently over time without any variation due to fatigue or habituation. In this case, we need to find lowest percentage (power) where more than half of mice could hear sound reliably. From data
+GT======== B
+Pred======== D Explanation: The cricothyroid membrane is located superior to thyroid cartilage, just below vocal cords. It provides access to trachea during emergencies when other methods of intubation have failed. Therefore, piercing this membrane would allow immediate entry into airway without waiting for more
+GT======== B
+Pred======== D Explanation: A type Ⅰ (slow twitch) fiber has red color due to high myoglobin content which allows them to store oxygen efficiently. They also contain more mitochondria than other types of fibers making them better at aerobic respiration. However, they contract slowly compared to other types because
+GT======== D
+Pred======== D Explanation: The EWS can be used to assess any patient who is acutely unwell preoperatively or postoperatively and those who have undergone major surgery. This includes elderly individuals as well as those admitted to emergency departments and intensive care/high-dependency units. Therefore, all options except A are
+GT======== D
+Pred======== D Explanation: D is correct answer because phosphocreatine (PC) resynthesis occurs through oxidative phosphorylation which requires sufficient levels of ATP as well as adequate amounts of NADH produced via glycolysis. An excessive amount of oxygen would not inhibit PC resynthesis but rather enhance its rate due to
+GT======== D
+Pred======== D Explanation: The patient's asthma seems to have worsened recently due to increased activity levels and exposure to allergens like pollen and cats. His peak expiratory flow rate indicates mild airflow obstruction consistent with moderate persistent asthma. Given this context, initiating daily corticosteroid inhaler would likely provide better
+GT======== D
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] tensor([5., 5., 5., 0., 5., 5., 1., 5., 1., 5., 1., 5., 5., 1., 5., 5., 1., 5.,
+        1., 5., 1., 5., 0., 5., 5., 0., 0., 0., 5., 5., 5., 5.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== C Explanation: The patient's symptoms include confusion, short-term memory loss, difficulty naming objects, and making literal paraphasic errors. These signs suggest herpes simplex virus infection rather than bacterial meningitis, which typically presents differently. Additionally, while HIV can cause neurological issues, there isn't enough evidence presented here to
+GT======== C
+Pred======== D The most common way for free fatty acids (FFAs) to enter bloodstream is through binding them to proteins called apolipoproteins. This process helps transport FFAs throughout body efficiently. Therefore, among options given: - **A** Inside Red Blood Cells - FFA's do
+GT======== D
+Pred======== D Explanation: D is correct answer because arteries carry blood away from heart towards various parts of body, including veins which return deoxygenated blood back to lungs through pulmonary circulation before being pumped again into systemic circulation via right side of heart (right ventricle). Therefore, when
+GT======== D
+Pred======== B Explanation: Hypovolemic shock occurs when there is insufficient circulating volume due to loss of fluid or plasma. The body compensates initially through vasoconstriction (increased peripheral resistance) which helps maintain mean arterial pressure until more significant losses occur. However, this compensation has limits; once approximately 4
+GT======== D
+Pred======== B Explanation: The question asks about probability (frequency) of offspring having genotype AABBCC when parents have genotypes AaBbCc each. This involves calculating probabilities using Punnett squares since we're dealing with independent assortment of alleles at different loci. For simplicity's sake, let's break down how
+GT======== A
+Pred======== B Explanation: The statement "B: It is more common in girls than in boys" is incorrect because Hirschsprung's Disease (HSCR) affects both males and females equally. Therefore, options A ("CRLF") and C ("DRE") could potentially have been true if they were presented
+GT======== B
+Pred======== D Explanation: D is most appropriate choice as patient exhibits signs of hypoglycemia (low blood sugar) due to excessive consumption of alcohol without adequate food intake. This can lead to impaired cognitive function, including anxiety, dizziness, and increased heart rate. In such cases, measuring serum
+GT======== D
+Pred======== D D C B A D D D D D D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+AAAAAA 32 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] tensor([1., 5., 0., 1., 5., 0., 0., 5., 0., 1., 5., 1., 5., 5., 5., 0., 5., 5.,
+        0., 1., 5., 5., 5., 0., 5., 5., 5., 0., 0., 5., 5., 1.])
+===============================================
+===============================================
+Duplicated! 64 32
+*********Start Step************
+*********End Step************
+*********End Step************
+*********End Step************
+*********End Step************
+                                                                                                                                                                                                  {'loss': 0.1767, 'reward': 3.3438, 'entropy': 86.19876098632812, 'query_len': 367.96875, 'response_len': 53.09375, 'learning_rate': 8.535533905932739e-06, 'epoch': 0.5}
+ 50%|███████████████████████████████████████████████████████████████████████████████                                                                               | 2/4 [15:29<10:14, 307.13s/it] 75%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                       | 3/4 [15:29<05:07, 307.30s/it]Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== A
+GT======== A
+Pred======== D Explanation: Option D states that insulin promotes glucose uptake by all tissues in body. However, this is incorrect as insulin primarily affects muscle tissue (Type II) rather than liver tissue (Type I). Therefore, correct answer should be either A or C depending upon context but generally speaking if we consider
+GT======== D
+Pred======== D Explanation: Semi-periphery countries have small percentages of extremely wealthy people (D). This can also mean they may not necessarily have strong central governments (A) or economies centered around just one natural resource (B), but rather diverse and developed economies like those found in many developing nations today such as India or
+GT======== C
+Pred======== A A is correct answer as whales belong to nektont group while barnacles, cyanobacteria, and protists do not. The other options can also be ruled out because they don't fit into this category either. Therefore, we have no doubt about our choice!
+GT======== A
+Pred======== B Explanation: Option B states that homeotic mutation substitutes one body part for another during development. This aligns with definition of homeotic mutation as it involves changes in gene expression leading to alterations in developmental processes resulting in substitutions between different structures within organisms. Therefore, this description fits best among all
+GT======== B
+Pred======== B Explanation: The given options can help us identify potential causes for symptoms described in case report. HIV antibody testing would not typically reveal any abnormalities since there's no mention of recent exposure or risk factors associated with HIV infection. Toxicology screenings might show evidence if illicit substances were consumed recently; however,
+GT======== D
+Pred======== C Explanation: Nephrolithiasis refers to condition where there are kidney stones present in kidneys. This can cause pain during urination and other symptoms related to urinary tract obstruction. The other options listed do not specifically refer to this condition but rather describe different types of renal diseases such as gl
+GT======== C
+Pred======== B Explanation: The cellular uptake of cholesterol does not involve adhesion plaques (B). Adhesion plaques play role in cell-cell communication but do not participate in lipid transport processes like cholesterol uptake. In contrast, options A (cell surface receptors), C (endosome formation) and D (re
+GT======== B
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D D C B A A D C B A A D C B A A D C B A A D C B A A D C B A A D
+GT======== D
+Pred======== B Explanation: The patient has sustained injuries to his head during car accident. Based on symptoms described (lacerations and ecchymoses over face, impaired sensation on one side of face and tongue), we can infer that there may have been damage to certain cranial nerves
+GT======== B
+Pred======== C Explanation: The question asks who publication "Your Guide to NHS" is intended for. Based on common knowledge about health publications, we can infer that this book would likely cater to individuals seeking guidance regarding their own medical care or understanding of national healthcare systems. Therefore, among options given (A
+GT======== C
+Pred======== C Explanation: Endurance training primarily enhances body's ability to burn stored fats as fuel during prolonged exercise. This allows athletes to sustain their performance over longer periods without relying heavily on glycogen stores (carbohydrates). Therefore, endurance training does not increase rate at which muscles contract nor break
+GT======== C
+Pred======== C Explanation: C is correct answer because each time through Krebs Cycle produces two carbon dioxide molecules as waste products and generates approximately 10-12 ATP molecules depending on specific conditions such as substrate availability and enzyme activity levels within cells. This makes options A ("2CO₂ and 2
+GT======== D
+Pred======== A Explanation: The primary function of sodium bicarbonate (NaHCO₃) supplementation during exercise is to buffer lactic acid produced as result of anaerobic metabolism. This helps maintain optimal blood pH levels within physiological ranges while reducing fatigue caused by excessive accumulation of acidic metabolites such as H⁺
+GT======== A
+Pred======== C C D B A A B C D D C A B C D D A B C D D A B C D D A B C D D A
+GT======== C
+Pred======== D Explanation: The seventh cranial nerve (VII) also known as facial nerve controls movement of muscles involved in chewing, smiling, frowning, raising eyebrows, closing eyes, licking lips, swallowing, and other actions related to facial expression. It does not supply taste buds on posterior third of
+GT======== C
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== C Explanation: The term describing motion of bending forearm towards body is flexion. This movement occurs when you bring your hand closer to your chest while keeping your elbow straight. Therefore, correct choice among given options would be C (flexion).
+GT======== C
+Pred======== D Explanation: The Doppler effect occurs when there's relative motion between two objects ( observer and source). To calculate apparent change in frequency (\(\Delta f\)) due to this movement, we use formula: \[ \frac{\Delta f}{f} = -v_{rel}/c
+GT======== D
+Pred======== B Explanation: Reptiles developed lungs during Carboniferous period around 405 million years ago (mya). This allowed them to breathe air more efficiently than amphibians which still relied heavily on gills as juveniles and skin respiration later in life. Mammals evolved much later
+GT======== B
+Pred======== C Explanation: Breast cancer typically causes bloody or brownish discharge rather than greenish discharge. Fibrocystic changes can also result in abnormal breast secretions but usually do not present as greenish discharge. Mammary duct ectasis often leads to milky discharge instead of greenish discharge. Pituitary
+GT======== C
+Pred======== C Explanation: C is most accurate response as low carbohydrate diets can lead to impaired high-intensity exercise performance due to reduced availability of glucose stores (glycogen) which fuels anaerobic metabolism required for short-duration intense activities like sprinting or weightlifting. This results in quicker depletion of energy reserves
+GT======== C
+Pred======== A Explanation: The patient's symptoms such as fatigue, dry skin, brittle hair, swollen ankles, and cold intolerance suggest hypothyroidism. The enlargement of thyroid gland indicates Hashimoto's thyroiditis, which is characterized by chronic inflammation leading to destruction of thyroid tissue over time. This condition can cause
+GT======== A
+Pred======== A Explanation: The stabilization of unique coiled structure of α-helix in protein is mainly due to hydrogen bonds formed between peptide backbone atoms at specific positions within polypeptide chain. These interactions occur specifically around certain residues such as glycines where they can form additional hydrogen bonds compared to other
+GT======== A
+Pred======== A D B C C B A A D C B A C D B A C D B A C D B A C D B A C D B
+GT======== A
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Find success exp!
+Pred======== D D D D D D D D D D D D D D D D D D D D D D
+GT======== D
+Pred======== D Explanation: Option D indicates that Tyler will likely improve in subsequent exams as he acknowledges his mistakes (critiquing his study methods) and seeks ways to make improvements before taking future tests. This proactive approach increases chances of better performance compared to options where Tyler blames external factors such as difficulty grading or personal issues
+GT======== A
+Pred======== D Explanation: C D B A C D B A C D B A C D B A C D B A C D B A C D B A C D
+GT======== A
+Pred======== D Explanation: Lekking behaviour refers to male-male competition among males within group, rather than being influenced by natural enemy selection. Therefore, lekking behaviour cannot be considered direct result of natural enemy pressure like aposematism, chemical defences, or mastigous fruits. Hence
+GT======== D
+Pred======== C Explanation: Option C is incorrect because both blastomeres should have equal chances of forming complete embryo if they receive similar nutrients and conditions during development. Therefore, neither blastomere would necessarily form smaller embryo compared to other due solely to having or not having gray crescent present at their
+GT======== B
+Pred======== A Explanation: The given information suggests that there exists at least one organism within domain of archaea that possesses both proteins resembling those found in eukaryotes - specifically, TBP and TFIIB. This implies that such organisms share certain similarities regarding gene expression mechanisms compared to other members of same
+GT======== A
+Pred======== C C C C C C C C C C C C C C C C C C C C C C
+GT======== C
+Pred======== B Explanation: Based on given clinical note, we can infer that there may be increased longevity among Finnish residents because of their regular sauna usage. However, none of options mentioned specifically relate to improved marital relationships or pet ownership. Therefore, without additional context linking any of these choices to effects of
+GT======== B
